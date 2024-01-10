@@ -1,0 +1,12 @@
+.body{
+    background: linear-gradient(#870000, #190A05)
+}
+.text{
+    color: #870000;
+}
+.shadow{
+    box-shadow: 1px;
+}
+.kk{
+    background-color: transparent;
+}

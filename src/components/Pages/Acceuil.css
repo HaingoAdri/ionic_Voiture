@@ -1,0 +1,42 @@
+.back{
+    background: linear-gradient(#870000, #190A05)
+}
+i{
+    color: #190A05;
+    font-size: 25px;
+}
+ul{
+    margin-left: 30px;
+}
+.style{
+    width: 22rem;
+}
+ul{
+    text-align: center;
+}
+.bg{
+    color: white;
+    background-color: #870000;
+}
+.bgg{
+    background-color: #870000;
+}
+.text{
+    color: #870000;
+}
+.bw{
+    background-color: white;
+    background-size: cover;
+}
+.scrollable-container {
+    max-height: calc(500px - 130px); /* Définissez la hauteur maximale pour laquelle la barre de défilement apparaîtra */
+    position: relative;
+    overflow-y: auto; /* Ajoute une barre de défilement uniquement si le contenu dépasse la hauteur spécifiée */
+}
+.texter{
+    color: aliceblue;
+}
+.ss{
+    width: 50px;
+    height: 300px;
+}
