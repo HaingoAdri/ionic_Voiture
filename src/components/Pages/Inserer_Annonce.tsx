@@ -7,6 +7,7 @@ import './bootstrap.bundle.min';
 import "./Acceuil.css";
 import image from "./img.png";
 import Navigation from "./Navigation";
+import { Link, withRouter } from "react-router-dom";
 
 class Inserer_Annonce extends React.Component{
     render(){
@@ -14,59 +15,116 @@ class Inserer_Annonce extends React.Component{
             <body>
                 <p></p>
                 <main className="container">
-                    <div className="back p-5 rounded mt-3 text-white">
-                        <h1>Liste annonce</h1>
-                        <p className="lead">Vente de voitue occasion.</p>
-                        <a className="btn btn-light text-danger" href="../../components/navbar/index.html" role="button">Voir details &raquo;</a>
+                    <div className=" p-2 rounded mt-3 text-white">
+                        <h1 className='text'>Inserer annonce</h1>
                     </div>
-                    <div className="row scrollspy-example scrollable-container  mt-3" data-bs-offset="0">
+                    <div className="row scrollspy-example scroller mt-3" data-bs-offset="0">
                         <div className="col-sm-6" id="ss">
                             <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
                                 <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
+                                    <form > 
+                                    <div className="p-4">
+                                        <div className="text-dark  ">
+                                            <label className="fw-bold">Marque:</label>
+                                            <select name="" className="form-control border-0 border-bottom" id="">
+                                                <option value="">Berline</option>
+                                                <option value="">Berline</option>
+                                            </select>
+                                        </div>
+
+                                        <p></p>
+                                        <div className="text-dark  ">
+                                            <label className="fw-bold">Categorie:</label>
+                                            <select name="" className="form-control border-0 border-bottom" id="">
+                                                <option value="">Berline</option>
+                                                <option value="">Berline</option>
+                                            </select>
+                                        </div>
+
+                                        <p></p>
+                                        <div className="text-dark  ">
+                                            <label className="fw-bold">Modele:</label>
+                                            <select name="" className="form-control border-0 border-bottom" id="">
+                                                <option value="">Berline</option>
+                                                <option value="">Berline</option>
+                                            </select>
+                                        </div>
+
+                                        <p></p>
+                                        <div className="text-dark  ">
+                                            <label className="fw-bold">Type d'occasion:</label>
+                                            <select name="" className="form-control border-0 border-bottom" id="">
+                                                <option value="">Berline</option>
+                                                <option value="">Berline</option>
+                                            </select>
+                                        </div>
+
+                                        <p></p>
+                                        <div className="text-dark  ">
+                                            <label className="fw-bold">Type d'occasion:</label>
+                                            <select name="" className="form-control border-0 border-bottom" id="">
+                                                <option value="">Berline</option>
+                                                <option value="">Berline</option>
+                                            </select>
+                                        </div>
+
+                                        <p></p>
+                                        <div className="text-dark  ">
+                                            <label className="fw-bold">Couleur:</label>
+                                            <select name="" className="form-control border-0 border-bottom" id="">
+                                                <option value="">Berline</option>
+                                                <option value="">Berline</option>
+                                            </select>
+                                        </div>
+
+                                        <p></p>
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Prix:</label>
+                                            <input type="number" className="form-control border-0 border-bottom" id="address" placeholder="🔒 Password" required/>
+                                        </div> 
+                                        <p></p>
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Date et heure:</label>
+                                            <input type="dateTime" className="form-control border-0 border-bottom" id="address" placeholder="🔒 Password" required/>
+                                        </div> 
+                                        <p></p>
+
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Description:</label>
+                                            <textarea name="" id="" className="form-control"></textarea>
+                                        </div> 
+
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Date et heure:</label>
+                                            <input type="dateTime" className="form-control border-0 border-bottom" id="address" placeholder="🔒 Password" required/>
+                                        </div> 
+                                        <p></p>
+
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Inserer image:</label>
+                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
+                                        </div> 
+                                        <p></p>
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Inserer image:</label>
+                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
+                                        </div> 
+                                        <p></p>
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Inserer image:</label>
+                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
+                                        </div> 
+                                        <p></p>
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Inserer image:</label>
+                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
+                                        </div> 
+                                        <p></p>
+                                    </div>
+                                </form>
+                                <div className="p-3 ">
+                                    <Link to="/Acceuil" className="btn btn-outline-danger bg-primary.bg-gradient w-100 text">Connexion</Link>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
                                 </div>
                             </div>
                         </div>

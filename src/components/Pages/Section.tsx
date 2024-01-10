@@ -6,7 +6,7 @@ import "../dist/bootstrap-icons.min.css";
 import './bootstrap.bundle.min';
 import "./Acceuil.css";
 import image from "./img.png";
-import Navigation from "./Navigation";
+import Navigation from './Navigation';
 
 class Section extends React.Component{
     render(){

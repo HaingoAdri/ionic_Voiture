@@ -5,7 +5,7 @@ import "../dist/bootstrap-icons.css";
 import "../dist/bootstrap-icons.min.css";
 import './bootstrap.bundle.min';
 import "./Acceuil.css";
-
+import { Link, withRouter } from "react-router-dom";
 
 class Navigation extends React.Component{
     render(){
@@ -16,7 +16,7 @@ class Navigation extends React.Component{
                         <i className="bi bi-list text-white"></i>
                     </button>
                     <button type="button" className="btn btn-outline-white position-relative rounded-pill text-center ml-5 ">
-                        <i className="bi bi-bell-fill text-white"></i>
+                        <Link to="/Notification"><i className="bi bi-bell-fill text-white"></i></Link>
                         <span className="position-absolute top-0 w-100 start-100 translate-middle badge rounded-pill bg-white text">
                             99+
                         <span className="visually-hidden">unread messages</span>
@@ -31,10 +31,10 @@ class Navigation extends React.Component{
                     <div className="collapse navbar-collapse bw" id="navbarCollapse">
                         <ul className="navbar-nav fw-bolder">
                             <li className="nav-item">
-                                <a className="nav-link text-dark" aria-current="page" href="#">Liste annonce</a>
+                                <Link to="/Acceuil" className="nav-link text-dark" aria-current="page">Liste annonce</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-dark" href="#">Modifier annonce</a>
+                                <Link to="/Inserer_Annonce" className="nav-link text-dark">Ajouter annonce</Link>
                             </li>
                                                 
                         </ul>
