@@ -11,7 +11,7 @@ const App: React.FC = () => (
   <IonApp className='body'>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route path="/*" exact={true}>
+        <Route path="/" exact={true}>
           <Login />
         </Route>
         <Route path="/Incription" exact={true} >

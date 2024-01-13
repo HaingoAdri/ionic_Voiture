@@ -130,7 +130,7 @@ class Inserer_Annonce extends React.Component{
                         </div>
                     </div>
                 </main>
-                <Navigation />
+                <Navigation sessionProp={{}} />
             </body>
         );
     }
