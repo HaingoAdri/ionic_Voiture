@@ -9,7 +9,7 @@ import send_raw from "../../utils/Sender";
 import { useHistory } from "react-router";
 import { useIonLoading } from "@ionic/react";
 
-function Navigation({sessionProp}) {
+function Navigation({sessionProp}: { sessionProp: any }) {
 //   const [session, setSession] = useState(null);
 
 //   const storedSessionString = localStorage.getItem("userSession");
@@ -27,7 +27,7 @@ function Navigation({sessionProp}) {
     try {
       const token = session.donnee.token;
       const reponse = await send_raw(
-        "http://localhost:8080/api/v1/logout",
+        "https://backend-web-service-voiture-occaz.onrender.com/api/v1/logout",
         {},
         token
       );
