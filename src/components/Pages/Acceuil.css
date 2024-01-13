@@ -29,7 +29,7 @@ ul{
     background-size: cover;
 }
 .scrollable-container {
-    max-height: calc(500px - 130px); /* Définissez la hauteur maximale pour laquelle la barre de défilement apparaîtra */
+    max-height: calc(700px - 130px); /* Définissez la hauteur maximale pour laquelle la barre de défilement apparaîtra */
     position: relative;
     overflow-y: auto; /* Ajoute une barre de défilement uniquement si le contenu dépasse la hauteur spécifiée */
 }
@@ -39,4 +39,8 @@ ul{
 .ss{
     width: 50px;
     height: 300px;
+}
+.scroller{
+    max-height: 750px;
+    overflow-y: auto;
 }

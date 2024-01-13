@@ -5,25 +5,17 @@ import "../dist/bootstrap-icons.css";
 import "../dist/bootstrap-icons.min.css";
 import "./bootstrap.bundle.min";
 import "./Acceuil.css";
+import { Link, withRouter } from "react-router-dom";
 import send_raw from "../../utils/Sender";
 import { useHistory } from "react-router";
 import { useIonLoading } from "@ionic/react";
 
-function Navigation({sessionProp}: { sessionProp: any }) {
-//   const [session, setSession] = useState(null);
-
-//   const storedSessionString = localStorage.getItem("userSession");
-//   if (storedSessionString) {
-//     // Convertir la chaîne JSON en objet
-//     const sess = JSON.parse(storedSessionString);
-//     setSession(sess);
-//   }
-
+function Navigation({ sessionProp }: { sessionProp: any }) {
   const [present, dismiss] = useIonLoading();
 
   const history = useHistory();
 
-  const logout = async (session : any) => {
+  const logout = async (session: any) => {
     try {
       const token = session.donnee.token;
       const reponse = await send_raw(
@@ -58,7 +50,9 @@ function Navigation({sessionProp}: { sessionProp: any }) {
           type="button"
           className="btn btn-outline-white position-relative rounded-pill text-center ml-5 "
         >
-          <i className="bi bi-bell-fill text-white"></i>
+          <Link to="/Notification">
+            <i className="bi bi-bell-fill text-white"></i>
+          </Link>
           <span className="position-absolute top-0 w-100 start-100 translate-middle badge rounded-pill bg-white text">
             99+
             <span className="visually-hidden">unread messages</span>
@@ -80,14 +74,18 @@ function Navigation({sessionProp}: { sessionProp: any }) {
         <div className="collapse navbar-collapse bw" id="navbarCollapse">
           <ul className="navbar-nav fw-bolder">
             <li className="nav-item">
-              <a className="nav-link text-dark" aria-current="page" href="#">
+              <Link
+                to="/Acceuil"
+                className="nav-link text-dark"
+                aria-current="page"
+              >
                 Liste annonce
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-dark" href="#">
-                Modifier annonce
-              </a>
+              <Link to="/Inserer_Annonce" className="nav-link text-dark">
+                Ajouter annonce
+              </Link>
             </li>
           </ul>
         </div>
@@ -96,6 +94,3 @@ function Navigation({sessionProp}: { sessionProp: any }) {
   );
 }
 export default Navigation;
-
-
-
