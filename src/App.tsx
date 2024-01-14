@@ -7,6 +7,8 @@ import Inscription from './components/Body/Inscription';
 import Acceuil from './components/Pages/Section';
 import Inserer_Annonce from './components/Pages/Inserer_Annonce';
 import Notification from './components/Pages/Notification';
+import Compte from './components/Pages/Compte';
+import Detail_Voiture from './components/Pages/Detail_Voiture';
 const App: React.FC = () => (
   <IonApp className='body'>
     <IonReactRouter>
@@ -25,6 +27,12 @@ const App: React.FC = () => (
         </Route>
         <Route path="/Notification" exact={true} >
           <Notification />
+        </Route>
+        <Route path="/Compte" exact={true} >
+          <Compte />
+        </Route>
+        <Route path="/Detail_Voiture" exact={true} >
+          <Detail_Voiture />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

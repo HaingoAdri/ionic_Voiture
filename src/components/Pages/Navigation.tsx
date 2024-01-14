@@ -23,7 +23,7 @@ class Navigation extends React.Component{
                         </span>
                     </button>
                     <button type="button" className="btn btn-outline-white position-relative text-center ml-5 border-none">
-                        <i className="bi bi-person-circle text-white"></i>
+                        <Link to="/Compte"><i className="bi bi-person-circle text-white"></i></Link>
                     </button>
                     <button type="button" className="btn btn-outline-white position-relative rounded-pill text-center ">
                         <i className="bi bi-box-arrow-right text-white"></i>

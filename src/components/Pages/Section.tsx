@@ -7,6 +7,7 @@ import './bootstrap.bundle.min';
 import "./Acceuil.css";
 import image from "./img.png";
 import Navigation from './Navigation';
+import { Link, withRouter } from "react-router-dom";
 
 class Section extends React.Component{
     render(){
@@ -19,14 +20,14 @@ class Section extends React.Component{
                         <p className="lead">Vente de voitue occasion.</p>
                         <a className="btn btn-light text-danger" href="../../components/navbar/index.html" role="button">Voir details &raquo;</a>
                     </div>
-                    <div className="row scrollspy-example scrollable-container  mt-3" data-bs-offset="0">
+                    <div className="row scrollable-container mt-3" data-bs-offset="0" data-bs-spy="scroll" data-bs-target="#navbar-example2" tabIndex={0}>
                         <div className="col-sm-6" id="ss">
                             <div className="card">
                                 <img src={image} className="card-img-top" alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        
                                 </div>
                             </div>
                         </div>
@@ -36,7 +37,7 @@ class Section extends React.Component{
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
+                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +47,7 @@ class Section extends React.Component{
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
+                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +57,7 @@ class Section extends React.Component{
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
+                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +67,7 @@ class Section extends React.Component{
                                 <div className="card-body">
                                     <h5 className="card-title">Card title</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="btn btn-outline-danger">Go somewhere</a>
+                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
                                 </div>
                             </div>
                         </div>

@@ -61,15 +61,6 @@ class Inserer_Annonce extends React.Component{
 
                                         <p></p>
                                         <div className="text-dark  ">
-                                            <label className="fw-bold">Type d'occasion:</label>
-                                            <select name="" className="form-control border-0 border-bottom" id="">
-                                                <option value="">Berline</option>
-                                                <option value="">Berline</option>
-                                            </select>
-                                        </div>
-
-                                        <p></p>
-                                        <div className="text-dark  ">
                                             <label className="fw-bold">Couleur:</label>
                                             <select name="" className="form-control border-0 border-bottom" id="">
                                                 <option value="">Berline</option>
@@ -80,12 +71,13 @@ class Inserer_Annonce extends React.Component{
                                         <p></p>
                                         <div className="text-dark">
                                             <label className="fw-bold">Prix:</label>
-                                            <input type="number" className="form-control border-0 border-bottom" id="address" placeholder="🔒 Password" required/>
+                                            <input type="number" className="form-control border-0 border-bottom" id="address" placeholder="Montant de la voiture" required/>
                                         </div> 
                                         <p></p>
+                                        
                                         <div className="text-dark">
                                             <label className="fw-bold">Date et heure:</label>
-                                            <input type="dateTime" className="form-control border-0 border-bottom" id="address" placeholder="🔒 Password" required/>
+                                            <input type="date" className="form-control border-0 border-bottom" id="address" placeholder="Date" required/>
                                         </div> 
                                         <p></p>
 
@@ -93,33 +85,24 @@ class Inserer_Annonce extends React.Component{
                                             <label className="fw-bold">Description:</label>
                                             <textarea name="" id="" className="form-control"></textarea>
                                         </div> 
+                                        <p></p>
+                                        
+                                        <div className="text-dark">
+                                            <label className="fw-bold">Inserer image:</label>
+                                            <input type="file" className="btn btn-danger" required/>
+                                            <p></p>
 
-                                        <div className="text-dark">
-                                            <label className="fw-bold">Date et heure:</label>
-                                            <input type="dateTime" className="form-control border-0 border-bottom" id="address" placeholder="🔒 Password" required/>
-                                        </div> 
-                                        <p></p>
+                                            <input type="file" className="btn btn-danger" required/>
+                                            <p></p>
 
-                                        <div className="text-dark">
-                                            <label className="fw-bold">Inserer image:</label>
-                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
+                                            <input type="file" className="btn btn-danger" required/>
+                                            <p></p>
+
+                                            <input type="file" className="btn btn-danger" required/>
+                                            <p></p>
                                         </div> 
                                         <p></p>
-                                        <div className="text-dark">
-                                            <label className="fw-bold">Inserer image:</label>
-                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
-                                        </div> 
-                                        <p></p>
-                                        <div className="text-dark">
-                                            <label className="fw-bold">Inserer image:</label>
-                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
-                                        </div> 
-                                        <p></p>
-                                        <div className="text-dark">
-                                            <label className="fw-bold">Inserer image:</label>
-                                            <input type="file" className="btn btn-danger" id="address" placeholder="Image" required/>
-                                        </div> 
-                                        <p></p>
+                                        
                                     </div>
                                 </form>
                                 <div className="p-3 ">
