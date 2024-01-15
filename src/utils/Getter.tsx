@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default async function send_raw_post(url : string, raw : any, token : string | null) {
+export default async function get(url : string, token : string | null) {
     try {
         if(token != null) {
             console.log("token ",token);
@@ -11,7 +11,7 @@ export default async function send_raw_post(url : string, raw : any, token : str
             ...(token && { 'Authorization': `Bearer ${token}` }),
         };
 
-        const response = await axios.post(url, raw, { headers });
+        const response = await axios.get(url, { headers });
 
         return response.data;
       } catch (error) {

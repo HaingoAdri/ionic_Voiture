@@ -19,7 +19,7 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
     try {
       const token = session.donnee.token;
       const reponse = await send_raw(
-        "https://backend-web-service-voiture-occaz.onrender.com/api/v1/logout",
+        "http://localhost:8080/api/v1/logout",
         {},
         token
       );
@@ -29,6 +29,7 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
         history.push(`/`);
       }, 1000);
     } catch (e) {
+      console.log(e);
       history.push(`/Accueil`);
     }
   };
