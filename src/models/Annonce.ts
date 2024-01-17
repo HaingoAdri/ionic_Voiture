@@ -1,3 +1,5 @@
+import EtatAnnonce from "./EtatAnnonce"
+
 export default interface Annonce {
     idAnnonce: number,
     proprietaire: {
@@ -47,13 +49,7 @@ export default interface Annonce {
     prix: number,
     pourcentageCommission: number,
     description: string,
-    etats: [
-        {
-            idEtatAnnonce: number,
-            typeEtat: number,
-            dateHeureEtat: string
-        }
-    ],
+    etats: EtatAnnonce [],
     etatAnnonce: number,
     dateHeureCreation: string,
     favoris: boolean

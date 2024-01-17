@@ -10,6 +10,7 @@ import image from "./img.png";
 import Navigation from './Navigation';
 import Annonce from '../../models/Annonce';
 import get from '../../utils/Getter';
+import getEtatAnnonce from "../../utils/EtatAnnonce";
 
 function Section() {
 
@@ -66,6 +67,19 @@ function Section() {
                   {annonce.description}
                 </p>
                 <h6 className="card-title">Prix : {annonce.prix.toLocaleString('mg-MG', { style: 'currency', currency: 'MGA' })}</h6>
+                <br />
+                <div>
+                  {getEtatAnnonce(annonce) === 1 && (
+                    <button className="btn btn-warning">Pas encore valide</button>
+                  )}
+                  {getEtatAnnonce(annonce) === 10 && (
+                    <button className="btn btn-info">valide non vendue</button>
+                  )}
+                  {getEtatAnnonce(annonce) === 100 && (
+                    <button className="btn btn-success">vendue</button>
+                  )}
+                </div>
+                <br />
                 <button onClick={() => handleDetailClick(annonce.idAnnonce)} className="btn btn-outline-danger">
                   Detail
                 </button>
