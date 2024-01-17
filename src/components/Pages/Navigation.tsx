@@ -15,6 +15,15 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
 
   const history = useHistory();
 
+  const toCompte = () => {
+    try {
+      console.log('toCompte');
+      history.push(`/Compte`);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const logout = async (session: any) => {
     try {
       const token = session.donnee.token;
@@ -59,12 +68,9 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
             <span className="visually-hidden">unread messages</span>
           </span>
         </button>
-        <button
-          type="button"
-          className="btn btn-outline-white position-relative text-center ml-5 border-none"
-        >
+          <Link to="/Compte">
           <i className="bi bi-person-circle text-white"></i>
-        </button>
+          </Link>
         <button
           type="button"
           onClick={() => logout(sessionProp)}
@@ -80,7 +86,16 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
                 className="nav-link text-dark"
                 aria-current="page"
               >
-                Liste annonce
+                Vos annonces validées non vendues
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/AllAnnonce"
+                className="nav-link text-dark"
+                aria-current="page"
+              >
+                Toutes vos annonces
               </Link>
             </li>
             <li className="nav-item">

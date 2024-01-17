@@ -11,7 +11,7 @@ import Navigation from './Navigation';
 import Annonce from '../../models/Annonce';
 import get from '../../utils/Getter';
 
-function Section() {
+function AllAnnonce() {
 
   const history = useHistory();
   const [session, setSession] = useState(null);  
@@ -21,11 +21,11 @@ function Section() {
     const storedSessionString = localStorage.getItem("userSession");
     if (storedSessionString) {
       const sess = JSON.parse(storedSessionString);
-      console.log("Accueil : Informations de session:", sess);
+      console.log("AllAnnonce : Informations de session:", sess);
       setSession(sess);
 
       //liste des annonces
-      get(`http://localhost:8080/api/v1/annonces/non-vendues-nofiltre/${sess.donnee.utilisateur.idUtilisateur}`, sess.donnee.token).then(reponse => {
+      get(`http://localhost:8080/api/v1/annonces/all/${sess.donnee.utilisateur.idUtilisateur}`, sess.donnee.token).then(reponse => {
         const listeAnnonceValideNonVendue : Annonce [] = reponse.donnee;
         setListeAnnonce(listeAnnonceValideNonVendue);
       });
@@ -34,7 +34,7 @@ function Section() {
 
   const handleDetailClick = (annonceId: number) => {
     console.log(`detail pour annonce id ${annonceId}`)
-    history.push(`/Detail_Voiture_Valide/${annonceId}`);
+    history.push(`/Detail_Voiture/${annonceId}`);
   };
 
   return (
@@ -43,7 +43,7 @@ function Section() {
       <main className="container">
         <div className="back p-5 rounded mt-3 text-white">
           <h1>Liste annonce</h1>
-          <p className="lead">Vos annonces validées pas encore vendues</p>
+          <p className="lead">Toutes vos annonces</p>
           {/* <a
             className="btn btn-light text-danger"
             href="../../components/navbar/index.html"
@@ -79,4 +79,4 @@ function Section() {
     </body>
   );
 }
-export default Section;
+export default AllAnnonce;

@@ -7,8 +7,8 @@ import "./Login.css";
 import send_raw from '../../utils/Sender';
 
 function Login() {
-  const [mail, setEmail] = useState<string>("");
-  const [pwd, setMotDePasse] = useState<string>("");
+  const [mail, setEmail] = useState<string>("u1@gmail.com");
+  const [pwd, setMotDePasse] = useState<string>("1234");
   const [present, dismiss] = useIonLoading();
   const history = useHistory();
 
@@ -27,6 +27,7 @@ function Login() {
         localStorage.setItem('userSession', sessionString);
         await present('Logging in...');
         setTimeout(async () => {
+            alert(`code web : ${session.donnee.code}`);
             dismiss();
             history.push(`/Acceuil`);
         }, 2000);
@@ -68,12 +69,6 @@ function Login() {
                       />
                     </div>
                     <p></p>
-
-                    <div className="text-dark">
-                      <a className="text-end text-muted text-decoration-none text">
-                        Mot de passe oublié ?
-                      </a>
-                    </div>
                     <p></p>
                   </div>
                   <button type="submit" className="btn btn-outline-danger bg-primary.bg-gradient w-100 text">
@@ -93,7 +88,7 @@ function Login() {
                     Aucun compte{" "}
                     <i className="bi bi-arrow-right-square-fill"></i>{" "}
                     <Link
-                      to="/Incription"
+                      to="/Inscription"
                       className="text-decoration-none text"
                     >
                       Inscrivez-vous!
