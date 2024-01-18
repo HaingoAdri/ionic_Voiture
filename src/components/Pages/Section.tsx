@@ -15,59 +15,90 @@ class Section extends React.Component{
             <body>
                 <p></p>
                 <main className="container">
-                    <div className="back p-5 rounded mt-3 text-white">
-                        <h1>Liste annonce</h1>
-                        <p className="lead">Vente de voitue occasion.</p>
-                        <a className="btn btn-light text-danger" href="../../components/navbar/index.html" role="button">Voir details &raquo;</a>
+                    <div className=" p-2 rounded mt-3 text-white">
+                        <h1 className='text'>Liste annonce</h1>
                     </div>
-                    <div className="row scrollable-container mt-3" data-bs-offset="0" data-bs-spy="scroll" data-bs-target="#navbar-example2" tabIndex={0}>
-                        <div className="col-sm-6" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
+                    <div className="scroller mb-12">
+                        <div className="row mt-3  h-100">
+                            
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 mt-3" id="ss">
-                            <div className="card">
-                                <img src={image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-6 mt-3" id="ss">
+                                <div className="card">
+                                    <img src={image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card title</h5>
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <Link to="/Detail_Voiture" className="btn btn-outline-danger">Go somewhere</Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

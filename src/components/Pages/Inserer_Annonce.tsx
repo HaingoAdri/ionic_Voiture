@@ -18,12 +18,13 @@ class Inserer_Annonce extends React.Component{
                     <div className=" p-2 rounded mt-3 text-white">
                         <h1 className='text'>Inserer annonce</h1>
                     </div>
-                    <div className="row scrollspy-example scroller mt-3" data-bs-offset="0">
-                        <div className="col-sm-6" id="ss">
+                    <div className="row sc mt-3 scroll" data-bs-offset="0">
+                        <div className="col-sm-6 " id="ss">
                             <div className="card">
                                 <div className="card-body">
                                     <form > 
                                     <div className="p-4">
+                                        
                                         <div className="text-dark  ">
                                             <label className="fw-bold">Marque:</label>
                                             <select name="" className="form-control border-0 border-bottom" id="">

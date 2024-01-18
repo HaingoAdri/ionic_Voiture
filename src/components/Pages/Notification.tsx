@@ -17,7 +17,7 @@ class Notification extends React.Component{
                     <div className="p-3 rounded mt-3 text">
                         <h1>Toutes les notifications :</h1>
                     </div>
-                    <div className="row scrollspy-example scrollable-container  mt-3 border-none" data-bs-offset="0">
+                    <div className="row scroller  mt-3 border-none" data-bs-offset="0">
                         <ol className="list-group list-group-numbered justify-content-center ml-6 p-4">
                             <li className="list-group-item d-flex justify-content-center align-items-center">
                                 <div className="ms-2 me-auto">

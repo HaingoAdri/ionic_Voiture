@@ -17,21 +17,23 @@ class Compte extends React.Component{
                     <div className="p-3 rounded mt-3 text">
                         <h1>Compte :</h1>
                     </div>
-                    <div className="row scrollspy-example scrollable-container  mt-3 border-none" data-bs-offset="0">
-                    <div className="card h-100">
-                        <img src={image} className="card-img-top" alt="..."/>
-                        <div className="card-body">
-                            <h5 className="card-title">Données :</h5>
+                    <div className="row sc  mt-3 p-4">
+                        <div className="card">
+                            <div className="card-header bg-transparent">
+                                <img src={image} className="card-img-top" alt="..."/>
+                            </div>
+                            <div className="card-body">
+                                <h5 className="card-title">Données :</h5>
 
-                            <p className="card-text">Nom :</p>
-                            <p className="card-text">Prenom :</p>
-                            <p className="card-text">Contact :</p>
-                            <p className="card-text">Email :</p>
-                            <p className="card-text">Sexe :</p>
-                        </div>
-                        <div className="card-footer">
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </div>
+                                <p className="card-text">Nom :</p>
+                                <p className="card-text">Prenom :</p>
+                                <p className="card-text">Contact :</p>
+                                <p className="card-text">Email :</p>
+                                <p className="card-text">Sexe :</p>
+                            </div>
+                            <div className="card-footer">
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </div>
                         </div>
                     </div>
                 </main>
