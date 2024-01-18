@@ -12,13 +12,16 @@ import Session from "../../models/Session";
 
 function Compte() {
   const history = useHistory();
-  const [session, setSession] = useState<Session>();
+  const [session, setSession] = useState();
+  const [sessionData, setSessionData] = useState<Session>();
   useEffect(() => {
     const storedSessionString = localStorage.getItem("userSession");
     if (storedSessionString) {
-      const sess: Session = JSON.parse(storedSessionString).donnee;
-      console.log("Accueil : Informations de session:", sess);
+      const sess = JSON.parse(storedSessionString);
+      console.log("Compte : Informations de session:", sess);
       setSession(sess);
+      const sessData : Session = sess.donnee; 
+      setSessionData(sessData);
     }
   }, []);
   return (
@@ -35,10 +38,10 @@ function Compte() {
           <div className="card h-100">
             <img src={image} className="card-img-top" alt="..." height={"20%"} />
             <div className="card-body">
-              {session && (
+              {sessionData && (
                 <>
-                <p className="card-text">Code connexion web : <strong>{session.code}</strong></p>
-                <p className="card-text">Email : <strong>{session.utilisateur.email}</strong></p>
+                <p className="card-text">Code connexion web : <strong>{sessionData.code}</strong></p>
+                <p className="card-text">Email : <strong>{sessionData.utilisateur.email}</strong></p>
                 </>
               )}
               

@@ -26,7 +26,7 @@ function AllAnnonce() {
       setSession(sess);
 
       //liste des annonces
-      get(`http://localhost:8080/api/v1/annonces/all/${sess.donnee.utilisateur.idUtilisateur}`, sess.donnee.token).then(reponse => {
+      get(`https://vente-occaz-production.up.railway.app/api/v1/annonces/all/${sess.donnee.utilisateur.idUtilisateur}`, sess.donnee.token).then(reponse => {
         const listeAnnonceValideNonVendue : Annonce [] = reponse.donnee;
         setListeAnnonce(listeAnnonceValideNonVendue);
       });

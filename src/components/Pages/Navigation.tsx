@@ -15,20 +15,11 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
 
   const history = useHistory();
 
-  const toCompte = () => {
-    try {
-      console.log('toCompte');
-      history.push(`/Compte`);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   const logout = async (session: any) => {
     try {
       const token = session.donnee.token;
       const reponse = await send_raw(
-        "http://localhost:8080/api/v1/logout",
+        "https://vente-occaz-production.up.railway.app/api/v1/logout",
         {},
         token
       );

@@ -32,7 +32,7 @@ function Inserer_Annonce() {
       setIdUser(sess.donnee.utilisateur.idUtilisateur);
 
       //liste des annonces
-      getAllCriteres("http://localhost:8080/api/v1", sess.donnee.token).then(
+      getAllCriteres("https://vente-occaz-production.up.railway.app/api/v1", sess.donnee.token).then(
         (reponse) => {
           const allCriteres: AllCriteres = reponse;
           setAllCriteres(allCriteres);
@@ -120,7 +120,7 @@ function Inserer_Annonce() {
     form.append("description", annonce.description);
 
     const urlCreate =
-      "http://localhost:8080/api/v1/annonces/creerAnnonce";
+      "https://vente-occaz-production.up.railway.app/api/v1/annonces/creerAnnonce";
     const response = await send_formData_post(urlCreate, form, token);
     console.log(response);
     history.push(`/AllAnnonce`);

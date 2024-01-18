@@ -24,7 +24,7 @@ function Detail_Voiture() {
     if (storedSessionString) {
       const sess = JSON.parse(storedSessionString);
       setSession(sess);
-      get(`http://localhost:8080/api/v1/annonces/${id}`, sess.donnee.token).then(reponse => {
+      get(`https://vente-occaz-production.up.railway.app/api/v1/annonces/${id}`, sess.donnee.token).then(reponse => {
         const a : Annonce = reponse.donnee;
         setAnnonce(a);
       });
