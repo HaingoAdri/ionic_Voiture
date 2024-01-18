@@ -39,22 +39,14 @@ function Section() {
   };
 
   return (
-    <body>
+    <body className="h-100">
       <p></p>
-      <main className="container">
-        <div className="back p-5 rounded mt-3 text-white">
-          <h1>Liste annonce</h1>
-          <p className="lead">Vos annonces validées pas encore vendues</p>
-          {/* <a
-            className="btn btn-light text-danger"
-            href="../../components/navbar/index.html"
-            role="button"
-          >
-            Voir details &raquo;
-          </a> */}
+      <main className="container h-100">
+      <div className="back p-2 rounded mt-3 text-white text-center">
+          <p className="lead">Annonces vlides pas encore vendues ( {listeAnnonce.length} annonces )</p>
         </div>
         <div
-          className="row scrollspy-example scrollable-container  mt-3"
+          className="row overflow-auto  mt-3 h-100"
           data-bs-offset="0"
         >
           {listeAnnonce.map((annonce, index) => (
