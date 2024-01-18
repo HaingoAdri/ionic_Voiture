@@ -67,7 +67,7 @@ function Detail_Voiture() {
         console.log("vendue ! ", a);
       });
     }
-    await present('vente en cours ...');
+    await present("vente en cours ...");
     setTimeout(async () => {
       dismiss();
       history.push(`/AllAnnonce`);
@@ -79,7 +79,7 @@ function Detail_Voiture() {
       <p></p>
       {annonce && (
         <main className="container">
-          <div className="p-3 rounded mt-3 text">
+          <div className="p-2 rounded mt-3 text">
             <h1>Fiche</h1>
           </div>
           <div
@@ -87,14 +87,12 @@ function Detail_Voiture() {
             data-bs-offset="0"
           >
             <div className="card h-100 mt-2">
-              {annonce.listePhotos.map((photo, index) => (
-                <img
-                  key={index}
-                  src={photo.repertoire}
-                  className="card-img-top rounded float-start mt-2"
-                  alt="..."
-                />
-              ))}
+              <button
+                onClick={() => handleVenteClick(annonce.idAnnonce)}
+                className="btn btn-outline-success"
+              >
+                MAJ etat en vendu
+              </button>
               <div className="card-body mt-2">
                 <p className="card-text fw-bold">
                   Categories : {annonce.categorie.nomCategorie}
@@ -122,15 +120,14 @@ function Detail_Voiture() {
                   Date et heure : {annonce.dateHeureCreation}
                 </p>
               </div>
-              <div className="card-header text-end text bg-transparent">
-                <i className="bi bi-speedometer2  btn btn-outline-danger"></i>
-              </div>
-              <button
-                onClick={() => handleVenteClick(annonce.idAnnonce)}
-                className="btn btn-outline-success"
-              >
-                MAJ etat en vendu
-              </button>
+              {annonce.listePhotos.map((photo, index) => (
+                <img
+                  key={index}
+                  src={photo.repertoire}
+                  className="card-img-top rounded float-start mt-2"
+                  alt="..."
+                />
+              ))}
             </div>
           </div>
         </main>

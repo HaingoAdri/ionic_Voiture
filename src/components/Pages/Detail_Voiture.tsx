@@ -36,7 +36,7 @@ function Detail_Voiture() {
       <p></p>
       {annonce && (
         <main className="container">
-        <div className="p-3 rounded mt-3 text">
+        <div className="p-2 rounded mt-3 text">
           <h1>Fiche</h1>
         </div>
         <div
@@ -44,14 +44,6 @@ function Detail_Voiture() {
           data-bs-offset="0"
         >
           <div className="card h-100 mt-2">
-            {annonce.listePhotos.map((photo, index) => (
-            <img
-              key={index}
-              src={photo.repertoire}
-              className="card-img-top rounded float-start mt-2"
-              alt="..."
-            />
-            ))}
             <div className="card-body mt-2">
               <p className="card-text fw-bold">Categories : {annonce.categorie.nomCategorie}</p>
               <p className="card-text fw-bold">Modele : {annonce.modele.nomModele}</p>
@@ -61,9 +53,14 @@ function Detail_Voiture() {
               <p className="card-text fw-bold">Prix : {annonce.prix.toLocaleString('mg-MG', { style: 'currency', currency: 'MGA' })}</p>
               <p className="card-text fw-bold">Date et heure : {annonce.dateHeureCreation}</p>
             </div>
-            <div className="card-header text-end text bg-transparent">
-              <i className="bi bi-speedometer2  btn btn-outline-danger"></i>
-            </div>
+            {annonce.listePhotos.map((photo, index) => (
+            <img
+              key={index}
+              src={photo.repertoire}
+              className="card-img-top rounded float-start mt-2"
+              alt="..."
+            />
+            ))}
           </div>
         </div>
       </main>
