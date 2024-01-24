@@ -11,6 +11,8 @@ import Notification from './components/Pages/Notification';
 import Compte from './components/Pages/Compte';
 import Detail_Voiture from './components/Pages/Detail_Voiture';
 import Detail_Voiture_Valide from './components/Pages/Detail_Voiture_Valide';
+import React from "react";
+import PushNotificationsContainer from "./components/Pages/notifications/PushNotificationsContainer";
 const App: React.FC = () => (
   <IonApp className='body'>
     <IonReactRouter>
@@ -41,6 +43,9 @@ const App: React.FC = () => (
         </Route>
         <Route path="/Detail_Voiture_Valide/:id" exact={true} >
           <Detail_Voiture_Valide />
+        </Route>
+        <Route path="/PushNotificationsContainer" exact={true} >
+          <PushNotificationsContainer />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

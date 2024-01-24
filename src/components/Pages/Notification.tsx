@@ -7,6 +7,7 @@ import "./bootstrap.bundle.min";
 import "./Acceuil.css";
 import image from "./img.png";
 import Navigation from "./Navigation";
+import { PushNotificationSchema, PushNotifications, Token, ActionPerformed } from '@capacitor/push-notifications';
 
 function Notification() {
   const [session, setSession] = useState(null);

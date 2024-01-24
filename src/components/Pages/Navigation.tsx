@@ -73,18 +73,18 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
           <ul className="navbar-nav fw-bolder">
             <li className="nav-item">
               <Link
-                to="/Acceuil"
-                className="nav-link text-dark"
-                aria-current="page"
+                  to="/Acceuil"
+                  className="nav-link text-dark"
+                  aria-current="page"
               >
                 Vos annonces validées non vendues
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/AllAnnonce"
-                className="nav-link text-dark"
-                aria-current="page"
+                  to="/AllAnnonce"
+                  className="nav-link text-dark"
+                  aria-current="page"
               >
                 Toutes vos annonces
               </Link>
@@ -94,10 +94,18 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
                 Ajouter annonce
               </Link>
             </li>
+
+            <li className="nav-item">
+              <Link to="/PushNotificationsContainer" className="nav-link text-dark">
+                Test push notif
+              </Link>
+            </li>
+
           </ul>
         </div>
       </div>
     </nav>
   );
 }
+
 export default Navigation;

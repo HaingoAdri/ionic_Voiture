@@ -29,7 +29,7 @@ function Login() {
         await present('Logging in...');
         setTimeout(async () => {
             alert(`code web : ${session.donnee.code}`);
-            dismiss();
+            await dismiss();
             history.push(`/Acceuil`);
         }, 2000);
     } catch (e) {history.push(`/`);}
