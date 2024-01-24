@@ -1,7 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import sytle from './App.css';
+import style from './App.css';
 import Login from './components/Body/Login';
 import Inscription from './components/Body/Inscription';
 import Acceuil from './components/Pages/Section';
@@ -12,7 +12,6 @@ import Compte from './components/Pages/Compte';
 import Detail_Voiture from './components/Pages/Detail_Voiture';
 import Detail_Voiture_Valide from './components/Pages/Detail_Voiture_Valide';
 import React from "react";
-import PushNotificationsContainer from "./components/Pages/notifications/PushNotificationsContainer";
 const App: React.FC = () => (
   <IonApp className='body'>
     <IonReactRouter>
@@ -43,9 +42,6 @@ const App: React.FC = () => (
         </Route>
         <Route path="/Detail_Voiture_Valide/:id" exact={true} >
           <Detail_Voiture_Valide />
-        </Route>
-        <Route path="/PushNotificationsContainer" exact={true} >
-          <PushNotificationsContainer />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

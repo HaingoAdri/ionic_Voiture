@@ -94,13 +94,6 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
                 Ajouter annonce
               </Link>
             </li>
-
-            <li className="nav-item">
-              <Link to="/PushNotificationsContainer" className="nav-link text-dark">
-                Test push notif
-              </Link>
-            </li>
-
           </ul>
         </div>
       </div>
