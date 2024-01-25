@@ -130,13 +130,14 @@ function Inserer_Annonce() {
     <body>
       <p></p>
       <main className="container">
-        <div className=" p-2 rounded mt-3 text-white">
+        <div className=" rounded text-white">
           <h1 className="text">Inserer annonce</h1>
         </div>
         {allCriteres && (
           <div
-            className="row scrollspy-example scroller mt-3"
+            className="row scrollspy-example scroller"
             data-bs-offset="0"
+            style={{ maxHeight : "600px" }}
           >
             <div className="col-sm-6" id="ss">
               <div className="card">
@@ -144,8 +145,8 @@ function Inserer_Annonce() {
                   <form 
                   onSubmit={handleFormSubmit}
                   encType="multipart/form-data">
-                    <div className="p-4">
-                      <div className="text-dark  ">
+                    <div className="p-1">
+                      <div className="text-dark w-100  ">
                         <label className="fw-bold">Marque:</label>
                         <select
                           name=""
@@ -171,7 +172,7 @@ function Inserer_Annonce() {
                       </div>
 
                       <p></p>
-                      <div className="text-dark  ">
+                      <div className="text-dark w-100  ">
                         <label className="fw-bold">Categorie:</label>
                         <select
                           name=""
@@ -197,7 +198,7 @@ function Inserer_Annonce() {
                       </div>
 
                       <p></p>
-                      <div className="text-dark  ">
+                      <div className="text-dark w-100  ">
                         <label className="fw-bold">Modele:</label>
                         <select
                           name=""
@@ -223,7 +224,7 @@ function Inserer_Annonce() {
                       </div>
 
                       <p></p>
-                      <div className="text-dark  ">
+                      <div className="text-dark w-100  ">
                         <label className="fw-bold">Type d'occasion:</label>
                         <select
                           name=""
@@ -249,7 +250,7 @@ function Inserer_Annonce() {
                       </div>
 
                       <p></p>
-                      <div className="text-dark  ">
+                      <div className="text-dark w-100  ">
                         <label className="fw-bold">Couleur:</label>
                         <select
                           name=""
@@ -275,7 +276,7 @@ function Inserer_Annonce() {
                       </div>
 
                       <p></p>
-                      <div className="text-dark">
+                      <div className="text-dark w-100">
                         <label className="fw-bold">Prix:</label>
                         <input
                           type="number"
@@ -306,57 +307,55 @@ function Inserer_Annonce() {
                       </div>
                       <p></p>
 
-                      <div className="text-dark">
-                        <label className="fw-bold">Inserer image:</label>
-                        <input
-                          type="file"
-                          className="btn btn-danger"
-                          id="address"
-                          placeholder="Image"
-                          onChange={(ev) => handleFileChange(ev, 0)}
-                          required
-                        />
-                      </div>
+                        <div className="text-dark">
+                          <label className="fw-bold">Inserer image 1</label>
+                          <input
+                            type="file"
+                            className="btn btn-danger w-100"
+                            id="address"
+                            placeholder="Image"
+                            onChange={(ev) => handleFileChange(ev, 0)}
+                            required
+                          />
+                        </div>
+                        <div className="text-dark">
+                          <label className="fw-bold">Inserer image 2</label>
+                          <input
+                            type="file"
+                            className="btn btn-danger w-100"
+                            id="address"
+                            placeholder="Image"
+                            onChange={(ev) => handleFileChange(ev, 1)}
+                            required
+                          />
+                        </div>
                       <p></p>
-                      <div className="text-dark">
-                        <label className="fw-bold">Inserer image:</label>
-                        <input
-                          type="file"
-                          className="btn btn-danger"
-                          id="address"
-                          placeholder="Image"
-                          onChange={(ev) => handleFileChange(ev, 1)}
-                          required
-                        />
-                      </div>
-                      <p></p>
-                      <div className="text-dark">
-                        <label className="fw-bold">Inserer image:</label>
-                        <input
-                          type="file"
-                          className="btn btn-danger"
-                          id="address"
-                          placeholder="Image"
-                          onChange={(ev) => handleFileChange(ev, 2)}
-                          required
-                        />
-                      </div>
-                      <p></p>
-                      <div className="text-dark">
-                        <label className="fw-bold">Inserer image:</label>
-                        <input
-                          type="file"
-                          className="btn btn-danger"
-                          id="address"
-                          placeholder="Image"
-                          onChange={(ev) => handleFileChange(ev, 3)}
-                          required
-                        />
-                      </div>
+                        <div className="text-dark">
+                          <label className="fw-bold">Inserer image 3</label>
+                          <input
+                            type="file"
+                            className="btn btn-danger w-100"
+                            id="address"
+                            placeholder="Image"
+                            onChange={(ev) => handleFileChange(ev, 2)}
+                            required
+                          />
+                        </div>
+                        <div className="text-dark">
+                          <label className="fw-bold">Inserer image 4</label>
+                          <input
+                            type="file"
+                            className="btn btn-danger w-100"
+                            id="address"
+                            placeholder="Image"
+                            onChange={(ev) => handleFileChange(ev, 3)}
+                            required
+                          />
+                        </div>
                       <p></p>
                     </div>
 
-                    <div className="p-3 ">
+                    <div className=" ">
                       <button className="btn btn-outline-danger bg-primary.bg-gradient w-100 text">
                         Créer l'annonce
                       </button>

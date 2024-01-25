@@ -11,6 +11,16 @@ import { useHistory } from "react-router";
 import { useIonLoading } from "@ionic/react";
 
 function Navigation({ sessionProp }: { sessionProp: any }) {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isVisible, setDisplay] = useState('none');
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    if(menuOpen == false) setDisplay('none');
+    else setDisplay('block');
+  };
+
   const [present, dismiss] = useIonLoading();
 
   const history = useHistory();
@@ -35,7 +45,19 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
   };
 
   return (
-    <nav className="navbar fixed-bottom navbar-expand-sm navbar-dark bgg">
+    <>
+    <nav className="fixed-bottom" style={{ width : 'fit-content' }}>
+      <div className="d-flex p-3">
+        <button
+          className="btn btn-outline-white border rounded-circle bg-primary"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+        >
+          <i className="bi bi-arrow-right text-white"></i>
+        </button>
+      </div>
+    </nav>
+    <nav className="navbar fixed-bottom navbar-expand-sm navbar-dark bgg" style={{display : isVisible}}>
       <div className="container-fluid p-1">
         <button
           className="btn btn-outline-white"
@@ -69,6 +91,13 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
         >
           <i className="bi bi-box-arrow-right text-white"></i>
         </button>
+        <button
+          className="btn btn-outline-white border rounded-circle bg-primary"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+        >
+          <i className="bi bi-arrow-left text-white"></i>
+        </button>
         <div className="collapse navbar-collapse bw" id="navbarCollapse">
           <ul className="navbar-nav fw-bolder">
             <li className="nav-item">
@@ -98,6 +127,7 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
         </div>
       </div>
     </nav>
+    </>
   );
 }
 export default Navigation;
