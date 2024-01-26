@@ -1,0 +1,5 @@
+npm run build
+
+npx cap sync
+
+ionic capacitor build android
