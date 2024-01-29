@@ -11,25 +11,19 @@ import { FCM } from '@capacitor-community/fcm';
 function Login() {
     const [mail, setEmail] = useState<string>("u1@gmail.com");
     const [pwd, setMotDePasse] = useState<string>("1234");
-    const [token, setToken] = useState<any>(null);
     const [present, dismiss] = useIonLoading();
     const history = useHistory();
-
-    useEffect(() => {
-        const fetchToken = async () => {
-            const token = await FCM.getToken();
-            setToken(token);
-        };
-        fetchToken();
-    }, []);
-
+    let token: string;
+    FCM.getToken().then(result => {
+        token = result.token;
+    });
 
     const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const raw = {
             utilisateur: {
-                email: mail,
-                motDePasse: pwd
+                email : mail,
+                motDePasse : pwd
             },
             tokenFcm: token
         };
