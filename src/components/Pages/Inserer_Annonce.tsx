@@ -32,7 +32,7 @@ function Inserer_Annonce() {
       setIdUser(sess.donnee.utilisateur.idUtilisateur);
 
       //liste des annonces
-      getAllCriteres("https://vente-occaz-production.up.railway.app/api/v1", sess.donnee.token).then(
+      getAllCriteres("https://vente-occaz-production-nomena.up.railway.app/api/v1", sess.donnee.token).then(
         (reponse) => {
           const allCriteres: AllCriteres = reponse;
           setAllCriteres(allCriteres);

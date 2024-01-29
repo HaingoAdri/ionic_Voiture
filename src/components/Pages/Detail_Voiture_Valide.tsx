@@ -40,7 +40,7 @@ function Detail_Voiture() {
       const sess = JSON.parse(storedSessionString);
       setSession(sess);
       get(
-        `https://vente-occaz-production.up.railway.app/api/v1/annonces/${id}`,
+        `https://vente-occaz-production-nomena.up.railway.app/api/v1/annonces/${id}`,
         sess.donnee.token
       ).then((reponse) => {
         const a: Annonce = reponse.donnee;

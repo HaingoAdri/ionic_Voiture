@@ -26,7 +26,9 @@ function Inscription() {
     try {
         // const session = await send_raw("https://backend-web-service-voiture-occaz.onrender.com/api/v1/login", raw, null);
         // const session = await send_raw("http://localhost:8080/api/v1/inscription", raw, null);
-        const session = await send_raw("https://vente-occaz-production.up.railway.app/api/v1/inscription", raw, null);
+        // const session = await send_raw("https://vente-occaz-production.up.railway.app/api/v1/inscription", raw, null);
+        const session = await send_raw("https://vente-occaz-production-nomena.up.railway.app/api/v1/inscription", raw, null);
+
         console.log(session);
         const sessionString = JSON.stringify(session);
         localStorage.setItem('userSession', sessionString);
