@@ -14,10 +14,10 @@ function Login() {
     const [present, dismiss] = useIonLoading();
     const history = useHistory();
     let token: string;
-    FCM.getToken().then(result => {
+/*  FCM.getToken().then(result => {
         token = result.token;
     });
-
+*/
     const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const raw = {
