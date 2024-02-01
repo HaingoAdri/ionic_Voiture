@@ -5,6 +5,7 @@ import "../Body/bootstrap.min.css";
 import { Link, useHistory, withRouter } from "react-router-dom";
 import { useIonLoading } from "@ionic/react";
 import send_raw from '../../utils/Sender';
+import {FCM} from "@capacitor-community/fcm";
 
 function Inscription() {
   const [mail, setEmail] = useState<string>("u1@gmail.com");
@@ -13,16 +14,26 @@ function Inscription() {
   const [present, dismiss] = useIonLoading();
   const history = useHistory();
 
-  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+
+    let token: string;
+    FCM.getToken().then(result => {
+        token = result.token;
+    });
+
+
+    const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const raw = {
-        idUtilisateur : -1,
-        email : mail,
-        motDePasse : pwd,
-        isAdmin : 0 
+        utilisateur: {
+            idUtilisateur : -1,
+            email : mail,
+            motDePasse : pwd,
+            isAdmin : 0
+        },
+        tokenFcm: token
     };
 
-    console.log(raw);
+      console.log(raw);
     try {
         const session = await send_raw("https://vente-occaz-production-nomena.up.railway.app/api/v2/inscription", raw, null);
 

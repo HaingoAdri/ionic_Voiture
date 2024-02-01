@@ -6,6 +6,7 @@ import { Link, useHistory, withRouter } from "react-router-dom";
 import "./Login.css";
 import send_raw from '../../utils/Sender';
 import { FCM } from '@capacitor-community/fcm';
+import {Toast} from "@capacitor/toast";
 
 
 function Login() {
@@ -13,6 +14,7 @@ function Login() {
     const [pwd, setMotDePasse] = useState<string>("1234");
     const [present, dismiss] = useIonLoading();
     const history = useHistory();
+
     let token: string;
     FCM.getToken().then(result => {
         token = result.token;
