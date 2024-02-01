@@ -1,7 +1,8 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import style from './App.css';
+// import style from './App.css';
+import './App.css';
 import Login from './components/Body/Login';
 import Inscription from './components/Body/Inscription';
 import Acceuil from './components/Pages/Section';
@@ -11,7 +12,6 @@ import Notification from './components/Pages/Notification';
 import Compte from './components/Pages/Compte';
 import Detail_Voiture from './components/Pages/Detail_Voiture';
 import Detail_Voiture_Valide from './components/Pages/Detail_Voiture_Valide';
-import React from "react";
 const App: React.FC = () => (
   <IonApp className='body'>
     <IonReactRouter>

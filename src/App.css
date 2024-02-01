@@ -1,3 +1,7 @@
 .body{
     background-color: aliceblue;
 }
+
+.ion-app-content {
+    height: calc(100vh - var(--ion-safe-area-top) - var(--ion-safe-area-bottom));
+}

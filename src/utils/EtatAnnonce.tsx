@@ -7,10 +7,11 @@ export default function getEtatAnnonce(annonce : Annonce) {
     
     //valide non vendue
     const hasEtatWithType10 = annonce.etats.some((etat) => etat.typeEtat === 10);
-    if(hasEtatWithType10) return 10;
 
     //valide et vendue
     const hasEtatWithType100 = annonce.etats.some((etat) => etat.typeEtat === 100);
+
+    if(hasEtatWithType10 && hasEtatWithType100 == false) return 10;
     if(hasEtatWithType100) return 100;
 
 }
