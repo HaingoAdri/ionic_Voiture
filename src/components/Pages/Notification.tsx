@@ -44,7 +44,7 @@ function Notification() {
                 });
             }
             else {
-                showToast('Push Notification désactivé');
+                register();
             }
         });
     },[])
@@ -76,6 +76,13 @@ function Notification() {
                 setnotifications(notifications => [...notifications, { ...notification, id: notification.id, title: parsedNotification.titre, body: parsedNotification.messageContent, dateTime: parsedNotification.dateHeureEnvoi, type: 'foreground' }])
             }
         );
+
+        // Notif après click sur bouton
+        PushNotifications.addListener('pushNotificationActionPerformed',
+            (notification: ActionPerformed) => {
+                setnotifications(notifications => [...notifications, { ...notification.notification.data, id: notification.notification.data.id, title: notification.notification.data.title, body: notification.notification.data.body, type: 'action' }])
+            }
+        );
     }
 
     const showToast = async (msg: string) => {
@@ -86,6 +93,16 @@ function Notification() {
 
     const nullEntry: any[] = []
     const [notifications, setnotifications] = useState(nullEntry);
+
+    const addNotification = () => {
+        const newNotification = {
+            id: Date.now(), // Utilisez la date actuelle comme ID unique
+            title: 'New Notification',
+            body: 'This is a new notification.',
+            type: 'manual'
+        };
+        setnotifications(notifications => [...notifications, newNotification]);
+    }
 
     return (
         <IonPage className="container">
@@ -125,7 +142,14 @@ function Notification() {
                 }
 
             </div>
+
+            <IonFooter>
+                <IonToolbar>
+                    <IonButton className="text-primary" expand="full" onClick={() => { register(); addNotification(); }} style={{ color: '#ffffff' }}>Register for Push</IonButton>
+                </IonToolbar>
+            </IonFooter>
             <Navigation sessionProp={session}/>
+
   </IonPage>
   );
 }
