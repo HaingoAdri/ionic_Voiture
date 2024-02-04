@@ -44,7 +44,7 @@ function Notification() {
                 });
             }
             else {
-                register();
+                showToast('Push Notification désactivé');
             }
         });
     },[])
@@ -76,13 +76,6 @@ function Notification() {
                 setnotifications(notifications => [...notifications, { ...notification, id: notification.id, title: parsedNotification.titre, body: parsedNotification.messageContent, dateTime: parsedNotification.dateHeureEnvoi, type: 'foreground' }])
             }
         );
-
-        // Notif après click sur bouton
-        PushNotifications.addListener('pushNotificationActionPerformed',
-            (notification: ActionPerformed) => {
-                setnotifications(notifications => [...notifications, { ...notification.notification.data, id: notification.notification.data.id, title: notification.notification.data.title, body: notification.notification.data.body, type: 'action' }])
-            }
-        );
     }
 
     const showToast = async (msg: string) => {
@@ -93,16 +86,6 @@ function Notification() {
 
     const nullEntry: any[] = []
     const [notifications, setnotifications] = useState(nullEntry);
-
-    const addNotification = () => {
-        const newNotification = {
-            id: Date.now(), // Utilisez la date actuelle comme ID unique
-            title: 'New Notification',
-            body: 'This is a new notification.',
-            type: 'manual'
-        };
-        setnotifications(notifications => [...notifications, newNotification]);
-    }
 
     return (
         <IonPage className="container">
@@ -130,8 +113,8 @@ function Notification() {
                                             <h3 className="notif-title">{notif.title}</h3>
                                         </IonText>
                                         <p>{notif.body}</p>
-                                        <p>From: {notif.data.nomUtilisateurEnvoyeur}</p>
-                                        <p>Sent: {notif.dateTime}</p>
+                                        {notif.data && <p>From: {notif.data.nomUtilisateurEnvoyeur}</p>}
+                                        {notif.data && <p>Sent: {notif.data.dateHeureEnvoi}</p>}
                                         {notif.type==='foreground' && <p>This data was received in foreground</p>}
                                         {notif.type==='action' && <p>This data was received on tap</p>}
                                     </IonLabel>
@@ -140,15 +123,9 @@ function Notification() {
                         }
                     </IonList>
                 }
+
             </div>
-
-            <IonFooter>
-                <IonToolbar>
-                    <IonButton className="text-primary" expand="full" onClick={() => { register(); addNotification(); }} style={{ color: '#ffffff' }}>Register for Push</IonButton>
-                </IonToolbar>
-            </IonFooter>
             <Navigation sessionProp={session}/>
-
   </IonPage>
   );
 }
