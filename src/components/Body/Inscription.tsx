@@ -35,7 +35,7 @@ function Inscription() {
 
       console.log(raw);
     try {
-        const session = await send_raw("https://vente-occaz-production-nomena.up.railway.app/api/v2/inscription", raw, null);
+        const session = await send_raw("https://vente-occaz-production-de3d.up.railway.app/api/v2/inscription", raw, null);
 
         console.log(session);
         const sessionString = JSON.stringify(session);
