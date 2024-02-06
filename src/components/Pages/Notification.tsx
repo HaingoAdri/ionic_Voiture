@@ -99,8 +99,8 @@ function Notification() {
                     <li key={notif.id}>
                       <div className="list-group-item d-flex justify-content-center align-items-center">
                         <p>{notif.body}</p>
-                        {notif.data && <p>De : {notif.data.nomUtilisateurEnvoyeur}</p>}
-                        {notif.data && <p>À: {notif.data.dateHeureEnvoi}</p>}
+                        {notif.nomUtilisateurEnvoyeur && <p>De : {notif.nomUtilisateurEnvoyeur}</p>}
+                        {notif.dateHeureEnvoi && <p>À: {notif.data.dateHeureEnvoi}</p>}
                       </div>
                     </li>
                 )
