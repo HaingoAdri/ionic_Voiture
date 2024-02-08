@@ -19,7 +19,7 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
     try {
       const token = session.donnee.token;
       const reponse = await send_raw(
-        "https://vente-occaz-production.up.railway.app/api/v1/logout",
+        "https://vente-occaz-production-de3d.up.railway.app/api/v1/logout",
         {},
         token
       );
