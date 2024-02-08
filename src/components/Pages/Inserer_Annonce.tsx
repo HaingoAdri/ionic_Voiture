@@ -14,9 +14,11 @@ import getAllCriteres from "../../utils/AllCriteresGetter";
 import uploadImagesToServer from "../../utils/Upload";
 import CreateAnnonce from "../../models/CreateAnnonce";
 import send_formData_post from "../../utils/SenderFormDataPost";
+import { useIonLoading } from "@ionic/react";
 
 function Inserer_Annonce() {
   const history = useHistory();
+  const [present, dismiss] = useIonLoading();
   const [session, setSession] = useState();
   const [token, setToken] = useState('');
   const [idUser, setIdUser] = useState('1');
@@ -32,13 +34,14 @@ function Inserer_Annonce() {
       setIdUser(sess.donnee.utilisateur.idUtilisateur);
 
       //liste des annonces
-      getAllCriteres("https://vente-occaz-production-nomena.up.railway.app/api/v1", sess.donnee.token).then(
+      getAllCriteres("https://vente-occaz-production-de3d.up.railway.app/api/v1", sess.donnee.token).then(
         (reponse) => {
           const allCriteres: AllCriteres = reponse;
           setAllCriteres(allCriteres);
           console.log(allCriteres);
         }
       );
+      
     }
   }, []);
 
@@ -87,6 +90,7 @@ function Inserer_Annonce() {
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(preAnnonce);
+    await present('Creation annonce...');
     const apiKey = "539a6413d94366bb9733e72e7a9dd1f1";
     const urlUpload = "https://api.imgbb.com/1/upload";
     const urlPhotos = await uploadImagesToServer(preAnnonce, apiKey, urlUpload);
@@ -120,9 +124,10 @@ function Inserer_Annonce() {
     form.append("description", annonce.description);
 
     const urlCreate =
-      "https://vente-occaz-production.up.railway.app/api/v1/annonces/creerAnnonce";
+      "https://vente-occaz-production-de3d.up.railway.app/api/v1/annonces/creerAnnonce";
     const response = await send_formData_post(urlCreate, form, token);
     console.log(response);
+    await dismiss();
     history.push(`/AllAnnonce`);
   };
 
@@ -372,11 +377,4 @@ function Inserer_Annonce() {
   );
 }
 export default Inserer_Annonce;
-function present(arg0: string) {
-    throw new Error("Function not implemented.");
-}
-
-function dismiss() {
-    throw new Error("Function not implemented.");
-}
 

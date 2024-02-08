@@ -40,7 +40,7 @@ function Detail_Voiture() {
       const sess = JSON.parse(storedSessionString);
       setSession(sess);
       get(
-        `https://vente-occaz-production-nomena.up.railway.app/api/v1/annonces/${id}`,
+        `https://vente-occaz-production-de3d.up.railway.app/api/v1/annonces/${id}`,
         sess.donnee.token
       ).then((reponse) => {
         const a: Annonce = reponse.donnee;
@@ -59,7 +59,7 @@ function Detail_Voiture() {
       );
       formData.append("idAnnonce", annonceId.toString());
       send_formData_post(
-        `https://vente-occaz-production.up.railway.app/api/v1/annonces/setAnnonceVendue`,
+        `https://vente-occaz-production-de3d.up.railway.app/api/v1/annonces/setAnnonceVendue`,
         formData,
         session.donnee.token
       ).then((reponse) => {
