@@ -19,7 +19,7 @@ function Section() {
   const [listeAnnonce, setListeAnnonce] = useState<Annonce []>([]);
 
   useEffect(() => {
-    const storedSessionString = localStorage.getItem("userSession");
+    const storedSessionString = sessionStorage.getItem("userSession");
     if (storedSessionString) {
       const sess = JSON.parse(storedSessionString);
       console.log("Accueil : Informations de session:", sess);
