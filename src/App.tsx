@@ -1,7 +1,6 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { Route } from 'react-router-dom';
+import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-// import style from './App.css';
 import './App.css';
 import Login from './components/Body/Login';
 import Inscription from './components/Body/Inscription';

@@ -26,7 +26,7 @@ function Section() {
       setSession(sess);
 
       //liste des annonces
-      get(`https://vente-occaz-production.up.railway.app/api/v1/annonces/non-vendues-nofiltre/${sess.donnee.utilisateur.idUtilisateur}`, sess.donnee.token).then(reponse => {
+      get(`https://vente-occaz-production-de3d.up.railway.app/api/v1/annonces/non-vendues-nofiltre/${sess.donnee.utilisateur.idUtilisateur}`, sess.donnee.token).then(reponse => {
         const listeAnnonceValideNonVendue : Annonce [] = reponse.donnee;
         setListeAnnonce(listeAnnonceValideNonVendue);
       });
@@ -43,7 +43,7 @@ function Section() {
       <p></p>
       <main className="container h-100">
       <div className="back p-2 rounded mt-3 text-white text-center">
-          <p className="lead">Annonces vlides pas encore vendues ( {listeAnnonce.length} annonces )</p>
+          <p className="lead">Annonces valides pas encore vendues ( {listeAnnonce.length} annonces )</p>
         </div>
         <div
           className="row overflow-auto  mt-3 h-100"

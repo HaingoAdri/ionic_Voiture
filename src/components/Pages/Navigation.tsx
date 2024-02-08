@@ -29,7 +29,7 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
     try {
       const token = session.donnee.token;
       const reponse = await send_raw(
-        "https://vente-occaz-production.up.railway.app/api/v1/logout",
+        "https://vente-occaz-production-de3d.up.railway.app/api/v1/logout",
         {},
         token
       );
@@ -102,18 +102,18 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
           <ul className="navbar-nav fw-bolder">
             <li className="nav-item">
               <Link
-                to="/Acceuil"
-                className="nav-link text-dark"
-                aria-current="page"
+                  to="/Acceuil"
+                  className="nav-link text-dark"
+                  aria-current="page"
               >
                 Vos annonces validées non vendues
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/AllAnnonce"
-                className="nav-link text-dark"
-                aria-current="page"
+                  to="/AllAnnonce"
+                  className="nav-link text-dark"
+                  aria-current="page"
               >
                 Toutes vos annonces
               </Link>
@@ -130,4 +130,5 @@ function Navigation({ sessionProp }: { sessionProp: any }) {
     </>
   );
 }
+
 export default Navigation;

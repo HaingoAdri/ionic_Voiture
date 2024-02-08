@@ -1,3 +1,3 @@
-io.ionic.starter.test
+com.carapp.test
 style WhiteBackgroundDialogTheme
 style WhiteBackgroundTheme
