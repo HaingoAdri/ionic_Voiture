@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.carapp-mergeReleaseResources-29:/values-be/values-be.xml",
+            "outputFile": "com.carapp-mergeReleaseResources-28:/values-be/values-be.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\9c93503ec2f6c0acb578d7618e52d827\\transformed\\play-services-basement-18.1.0\\res\\values-be\\values.xml",

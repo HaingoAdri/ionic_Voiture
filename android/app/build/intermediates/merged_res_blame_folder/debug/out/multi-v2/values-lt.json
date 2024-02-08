@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.carapp-mergeDebugResources-29:/values-lt/values-lt.xml",
+            "outputFile": "com.carapp-mergeDebugResources-28:/values-lt/values-lt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\8bb8b13c1438848676861a1388a97eb3\\transformed\\appcompat-1.6.1\\res\\values-lt\\values-lt.xml",

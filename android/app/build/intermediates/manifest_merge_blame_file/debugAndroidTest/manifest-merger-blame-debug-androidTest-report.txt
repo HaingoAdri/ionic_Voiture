@@ -3,24 +3,24 @@
 3    package="com.carapp.test" >
 4
 5    <uses-sdk
-5-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:5:5-74
+5-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:5:5-74
 6        android:minSdkVersion="22"
-6-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:5:15-41
+6-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:5:15-41
 7        android:targetSdkVersion="33" />
-7-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:5:42-71
+7-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:5:42-71
 8
 9    <instrumentation
-9-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:11:5-15:60
+9-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:11:5-15:60
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:11:22-76
+10-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:11:22-76
 11        android:functionalTest="false"
-11-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:14:22-52
+11-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:14:22-52
 12        android:handleProfiling="false"
-12-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:13:22-53
+12-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:13:22-53
 13        android:label="Tests for com.carapp"
-13-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:15:22-58
+13-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:15:22-58
 14        android:targetPackage="com.carapp" />
-14-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:12:22-56
+14-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:12:22-56
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.5.0] C:\Users\ADMIN\.gradle\caches\transforms-3\ec985eb774b6e2f8fedbaa0cecaad627\transformed\core-1.5.0\AndroidManifest.xml:24:5-72
@@ -40,10 +40,10 @@
 22    </queries>
 23
 24    <application android:debuggable="true" >
-24-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:7:5-9:19
+24-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:7:5-9:19
 25        <uses-library android:name="android.test.runner" />
-25-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:8:9-60
-25-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15251174281305801381.xml:8:23-57
+25-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:8:9-60
+25-->D:\ITU\S5\Web_avance\CLOUD\automobile\mobile-ionic\ionic_Voiture\android\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest3911752236263651678.xml:8:23-57
 26
 27        <activity
 27-->[androidx.test:core:1.5.0] C:\Users\ADMIN\.gradle\caches\transforms-3\ec985eb774b6e2f8fedbaa0cecaad627\transformed\core-1.5.0\AndroidManifest.xml:27:9-34:20

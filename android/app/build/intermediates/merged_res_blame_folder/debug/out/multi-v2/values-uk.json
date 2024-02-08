@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.carapp-mergeDebugResources-29:/values-uk/values-uk.xml",
+            "outputFile": "com.carapp-mergeDebugResources-28:/values-uk/values-uk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\2d962741d91c910a3db7a5460737cdfe\\transformed\\play-services-base-18.0.1\\res\\values-uk\\values.xml",

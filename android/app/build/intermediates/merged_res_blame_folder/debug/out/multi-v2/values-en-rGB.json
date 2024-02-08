@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.carapp-mergeDebugResources-29:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.carapp-mergeDebugResources-28:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\8bb8b13c1438848676861a1388a97eb3\\transformed\\appcompat-1.6.1\\res\\values-en-rGB\\values-en-rGB.xml",
