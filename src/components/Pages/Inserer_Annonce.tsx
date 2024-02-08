@@ -39,6 +39,7 @@ function Inserer_Annonce() {
           console.log(allCriteres);
         }
       );
+      
     }
   }, []);
 
