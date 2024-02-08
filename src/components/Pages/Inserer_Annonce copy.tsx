@@ -373,11 +373,4 @@ function Inserer_Annonce() {
   );
 }
 export default Inserer_Annonce;
-function present(arg0: string) {
-    throw new Error("Function not implemented.");
-}
-
-function dismiss() {
-    throw new Error("Function not implemented.");
-}
 
