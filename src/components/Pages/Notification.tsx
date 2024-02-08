@@ -51,12 +51,12 @@ function Notification() {
     );
 
     // Notif reçues en background
-    PushNotifications.addListener('pushNotificationReceived',
-        (notification: PushNotificationSchema) => {
-          let parsedNotification = JSON.parse(notification.data.body);
-          setnotifications(notifications => [...notifications, { ...notification, id: notification.id, title: parsedNotification.titre, body: parsedNotification.messageContent, dateTime: parsedNotification.dateHeureEnvoi, type: 'foreground' }])
-        }
-    );
+      PushNotifications.addListener('pushNotificationReceived',
+          (notification: PushNotificationSchema) => {
+              const parsedNotification = JSON.parse(notification.data.body); // Access properties directly
+              setnotifications(notifications => [...notifications, parsedNotification]); // Store parsed data
+          }
+      );
   }
 
 
@@ -91,22 +91,22 @@ function Notification() {
           className="row scrollspy-example scrollable-container mt-3 border-none"
           data-bs-offset="0">
 
-        {
-            notifications.length !== 0 &&
-            <ul className="list-group list-group-numbered justify-content-center ml-6 p-4">
-              {
-                notifications.map((notif: any) =>
-                    <li key={notif.id}>
-                      <div className="list-group-item d-flex justify-content-center align-items-center">
-                        <p>{notif.body}</p>
-                        {notif.nomUtilisateurEnvoyeur && <p>De : {notif.nomUtilisateurEnvoyeur}</p>}
-                        {notif.dateHeureEnvoi && <p>À: {notif.dateHeureEnvoi}</p>}
-                      </div>
-                    </li>
-                )
-              }
-            </ul>
-        }
+          {
+              notifications.length !== 0 &&
+              <ul className="list-group list-group-numbered justify-content-center ml-6 p-4">
+                  {
+                      notifications.map((notif: any) =>
+                          <li key={notif.id}>
+                              <div className="list-group-item d-flex justify-content-center align-items-center">
+                                  <p>{notif.messageContent}</p>
+                                  <p>De : {notif.nomUtilisateurEnvoyeur}</p>
+                                  <p>À: {notif.dateHeureEnvoi}</p>
+                              </div>
+                          </li>
+                      )
+                  }
+              </ul>
+          }
 
       </div>
       <Navigation sessionProp={session}/>
@@ -114,6 +114,6 @@ function Notification() {
   );
 
 
-
 }
+
 export default Notification;
