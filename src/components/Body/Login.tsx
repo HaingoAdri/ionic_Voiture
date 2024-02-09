@@ -6,6 +6,7 @@ import { Link, useHistory, withRouter } from "react-router-dom";
 import "./Login.css";
 import send_raw from '../../utils/Sender';
 import { FCM } from '@capacitor-community/fcm';
+import {Toast} from "@capacitor/toast";
 
 
 function Login() {

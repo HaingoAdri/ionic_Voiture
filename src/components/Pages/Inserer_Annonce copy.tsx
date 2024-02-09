@@ -32,7 +32,7 @@ function Inserer_Annonce() {
       setIdUser(sess.donnee.utilisateur.idUtilisateur);
 
       //liste des annonces
-      getAllCriteres("https://vente-occaz-production-de3d.up.railway.app/api/v1", sess.donnee.token).then(
+      getAllCriteres("https://vente-occaz-production.up.railway.app/api/v1", sess.donnee.token).then(
         (reponse) => {
           const allCriteres: AllCriteres = reponse;
           setAllCriteres(allCriteres);
@@ -120,7 +120,7 @@ function Inserer_Annonce() {
     form.append("description", annonce.description);
 
     const urlCreate =
-      "https://vente-occaz-production-de3d.up.railway.app/api/v1/annonces/creerAnnonce";
+      "https://vente-occaz-production.up.railway.app/api/v1/annonces/creerAnnonce";
     const response = await send_formData_post(urlCreate, form, token);
     console.log(response);
     history.push(`/AllAnnonce`);
@@ -373,4 +373,11 @@ function Inserer_Annonce() {
   );
 }
 export default Inserer_Annonce;
+function present(arg0: string) {
+    throw new Error("Function not implemented.");
+}
+
+function dismiss() {
+    throw new Error("Function not implemented.");
+}
 
