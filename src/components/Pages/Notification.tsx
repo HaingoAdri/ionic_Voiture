@@ -8,6 +8,7 @@ import "./Acceuil.css";
 import Navigation from "./Navigation";
 import {PushNotifications, PushNotificationSchema, Token} from "@capacitor/push-notifications";
 import {Toast} from "@capacitor/toast";
+import Notification from "../../models/Notification";
 
 function Notification() {
   const [session, setSession] = useState(null);
@@ -26,13 +27,16 @@ function Notification() {
     })
   }
 
-  const nullEntry: any[] = []
+  const nullEntry: Notification[] = []
   const [notifications, setnotifications] = useState(nullEntry);
-
+  const [uniqueNotif, setUniqueNotif] = useState<Notification>(
+      {
+    "nomUtilisateurEnvoyeur": "",
+    "messageContent": "",
+    "dateHeureEnvoi": ""
+  });
 
   const register = () => {
-    console.log('Initializing HomePage');
-
     // Register with Apple / Google to receive push via APNS/FCM
     PushNotifications.register();
 
@@ -51,12 +55,34 @@ function Notification() {
     );
 
     // Notif reçues en background
-    PushNotifications.addListener('pushNotificationReceived',
-        (notification: PushNotificationSchema) => {
-          let parsedNotification = JSON.parse(notification.data.body);
-          setnotifications(notifications => [...notifications, { ...notification, id: notification.id, title: parsedNotification.titre, body: parsedNotification.messageContent, dateTime: parsedNotification.dateHeureEnvoi, type: 'foreground' }])
-        }
-    );
+      PushNotifications.addListener('pushNotificationReceived',
+          (notification: PushNotificationSchema) => {
+
+              let parsedNotification: Notification = notification.data.data;
+
+              setUniqueNotif(parsedNotification);
+              alert(JSON.stringify(parsedNotification));
+              alert(parsedNotification.nomUtilisateurEnvoyeur+" "+parsedNotification.messageContent+" "+parsedNotification.dateHeureEnvoi);
+
+              //const str = JSON.stringify(notification.data.data);
+              //const parsed = JSON.parse(str);
+              //alert(str+" \n "+parsed.nomUtilisateurEnvoyeur+" "+parsed.messageContent+" "+parsed.dateHeureEnvoi);
+              //alert(JSON.stringify(notification.data.data.nomUtilisateurEnvoyeur) + " : " + notification.data.data.messageContent + " : " + notification.data.data.dateHeureEnvoi);
+
+              /*
+              // Use functional update to ensure we're working with the latest state
+              setnotifications(prevNotifications => [
+                  ...prevNotifications,
+                  {
+                      "nomUtilisateurEnvoyeur": parsedNotification.nomUtilisateurEnvoyeur,
+                      "messageContent": parsedNotification.messageContent,
+                      "dateHeureEnvoi": parsedNotification.dateHeureEnvoi
+                  }
+              ]);
+*/
+          }
+      );
+
   }
 
 
@@ -80,7 +106,8 @@ function Notification() {
   },[])
 
 
-  return (
+  //@ts-ignore
+    return (
       <body className="container">
       <div className="p-3 rounded mt-3 text">
         <h1 className="h2"> Push Notifications</h1>
@@ -91,29 +118,43 @@ function Notification() {
           className="row scrollspy-example scrollable-container mt-3 border-none"
           data-bs-offset="0">
 
-        {
-            notifications.length !== 0 &&
-            <ul className="list-group list-group-numbered justify-content-center ml-6 p-4">
-              {
-                notifications.map((notif: any) =>
-                    <li key={notif.id}>
-                      <div className="list-group-item d-flex justify-content-center align-items-center">
-                        <p>{notif.body}</p>
-                        {notif.nomUtilisateurEnvoyeur && <p>De : {notif.nomUtilisateurEnvoyeur}</p>}
-                        {notif.dateHeureEnvoi && <p>À: {notif.dateHeureEnvoi}</p>}
+
+          <ul className="list-group list-group-numbered justify-content-center ml-6 p-4">
+              <li className="list-group-item">
+                  <div className="d-flex justify-content-between">
+                      <h6>test1@gmail.com</h6>
+                      <small>ven. 6 février 2024 14:37</small>
+                  </div>
+                  <p>Ceci est juste un test</p>
+              </li>
+
+              <li className="list-group-item">
+                  <div className="d-flex justify-content-between">
+                      <h6>{uniqueNotif.nomUtilisateurEnvoyeur}</h6>
+                      <small>{uniqueNotif.dateHeureEnvoi}</small>
+                  </div>
+                  <p>{uniqueNotif.messageContent}</p>
+              </li>
+
+              {/*
+                  <li className="list-group-item">
+                      <div className="d-flex justify-content-between">
+                          <h6>test1@gmail.com</h6>
+                          <small>ven. 6 février 2024 14:37</small>
                       </div>
-                    </li>
-                )
+                      <p>Ceci est juste un test</p>
+                  </li>
+                  */
               }
-            </ul>
-        }
+
+          </ul>
 
       </div>
       <Navigation sessionProp={session}/>
       </body>
-  );
-
+    );
 
 
 }
+
 export default Notification;

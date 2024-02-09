@@ -29,22 +29,24 @@ ul{
     background-size: cover;
 }
 .scrollable-container {
-    max-height: calc(700px - 150px); /* Définissez la hauteur maximale pour laquelle la barre de défilement apparaîtra */
-    position: relative;
-    overflow-y: auto; /* Ajoute une barre de défilement uniquement si le contenu dépasse la hauteur spécifiée */
+    max-height: 800px; /* Définissez la hauteur maximale pour laquelle la barre de défilement apparaîtra */
+    overflow-y: scroll; /*Ajoute une barre de défilement uniquement si le contenu dépasse la hauteur spécifiée*/
 }
 .texter{
     color: aliceblue;
 }
 .ss{
     width: 50px;
-    height: 300px;
+    height: 50px;
 }
 .scroller{
-    max-height: 720px;
-    overflow-y: auto;
+    max-height: 580px;
+    overflow-y: scroll;
+}
+.scroll{
+    max-height: 600px;
+    overflow-y: scroll;
 }
 .sc{
-    max-height: 710px;
-    overflow-y: auto;
+    height: 600px;
 }

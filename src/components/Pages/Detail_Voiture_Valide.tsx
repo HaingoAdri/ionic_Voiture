@@ -59,7 +59,7 @@ function Detail_Voiture() {
       );
       formData.append("idAnnonce", annonceId.toString());
       send_formData_post(
-        `https://vente-occaz-production-de3d.up.railway.app/api/v1/annonces/setAnnonceVendue`,
+        `https://vente-occaz-production.up.railway.app/api/v1/annonces/setAnnonceVendue`,
         formData,
         session.donnee.token
       ).then((reponse) => {
