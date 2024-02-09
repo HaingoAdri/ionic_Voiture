@@ -31,9 +31,9 @@ function Notification() {
   const [notifications, setnotifications] = useState(nullEntry);
   const [uniqueNotif, setUniqueNotif] = useState<Notification>(
       {
-    "nomUtilisateurEnvoyeur": "",
-    "messageContent": "",
-    "dateHeureEnvoi": ""
+    nomUtilisateurEnvoyeur: "",
+    messageContent: "",
+    dateHeureEnvoi: ""
   });
 
   const register = () => {
@@ -54,15 +54,47 @@ function Notification() {
         }
     );
 
-    // Notif reçues en background
+/*
+      const parseNotifStr = (notifStr : string) => {
+          const notification : Notification = {
+              nomUtilisateurEnvoyeur : '',
+              messageContent : '',
+              dateHeureEnvoi : ''
+          }
+
+          notifStr = notifStr.replace('{', '');
+          notifStr = notifStr.replace('}', '');
+          notifStr = notifStr.replace("\"", '');
+
+          alert(JSON.stringify(notifStr));
+          const attributesValues : string [] = notifStr.split(",");
+          alert(JSON.stringify(attributesValues));
+
+          attributesValues.forEach(attrValue => {
+              if(attrValue.split(":")[0] == 'nomUtilisateurEnvoyeur') {
+                  notification.nomUtilisateurEnvoyeur = attrValue.split(":")[1];
+                  alert(notification.nomUtilisateurEnvoyeur);
+              } else if (attrValue.split(":")[0] == 'messageContent') {
+                  notification.messageContent = attrValue.split(":")[1];
+                  alert(notification.messageContent);
+              } else if (attrValue.split(":")[0] == 'dateHeureEnvoi') {
+                  notification.dateHeureEnvoi = attrValue.split(":")[1];
+                  alert(notification.dateHeureEnvoi);
+              }
+          });
+
+          return notification;
+      }
+
+*/
+
+      // Notif reçues en background
       PushNotifications.addListener('pushNotificationReceived',
           (notification: PushNotificationSchema) => {
 
-              let parsedNotification: Notification = notification.data.data;
+              alert(JSON.stringify(notification.data.data));
 
-              setUniqueNotif(parsedNotification);
-              alert(JSON.stringify(parsedNotification));
-              alert(parsedNotification.nomUtilisateurEnvoyeur+" "+parsedNotification.messageContent+" "+parsedNotification.dateHeureEnvoi);
+              //alert(parsedNotification.nomUtilisateurEnvoyeur+" "+parsedNotification.messageContent+" "+parsedNotification.dateHeureEnvoi);
 
               //const str = JSON.stringify(notification.data.data);
               //const parsed = JSON.parse(str);
@@ -120,34 +152,18 @@ function Notification() {
 
 
           <ul className="list-group list-group-numbered justify-content-center ml-6 p-4">
-              <li className="list-group-item">
-                  <div className="d-flex justify-content-between">
-                      <h6>test1@gmail.com</h6>
-                      <small>ven. 6 février 2024 14:37</small>
-                  </div>
-                  <p>Ceci est juste un test</p>
-              </li>
-
-              <li className="list-group-item">
-                  <div className="d-flex justify-content-between">
-                      <h6>{uniqueNotif.nomUtilisateurEnvoyeur}</h6>
-                      <small>{uniqueNotif.dateHeureEnvoi}</small>
-                  </div>
-                  <p>{uniqueNotif.messageContent}</p>
-              </li>
-
-              {/*
-                  <li className="list-group-item">
-                      <div className="d-flex justify-content-between">
-                          <h6>test1@gmail.com</h6>
-                          <small>ven. 6 février 2024 14:37</small>
-                      </div>
-                      <p>Ceci est juste un test</p>
-                  </li>
-                  */
-              }
-
+                {notifications.map((notif, index) => (
+                    <li className="list-group-item d-flex justify-content-between align-items-start">
+                        <div className="ms-2 me-auto">
+                            <div className="fw-bold">{notif.nomUtilisateurEnvoyeur}</div>
+                            {notif.messageContent}
+                        </div>
+                        <span className="badge bg-primary rounded-pill">{notif.dateHeureEnvoi}</span>
+                    </li>
+                ))}
           </ul>
+
+
 
       </div>
       <Navigation sessionProp={session}/>
