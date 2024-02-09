@@ -54,32 +54,41 @@ function Notification() {
         }
     );
 
+    const parseNotifStr = (notifStr : string) => {
+      const notification : Notification = {
+        nomUtilisateurEnvoyeur : '',
+        messageContent : '',
+        dateHeureEnvoi : ''
+      }
+      
+      notifStr = notifStr.replace('{', '');
+      notifStr = notifStr.replace('}', '');
+      notifStr = notifStr.replace("\"", '');
+      
+      const attributesValues : string [] = notifStr.split(",");
+      
+      attributesValues.forEach(attrValue => {
+        if(attrValue.split(":")[0] == 'nomUtilisateurEnvoyeur') {
+          notification.nomUtilisateurEnvoyeur = attrValue.split(":")[1];
+        } else if (attrValue.split(":")[0] == 'messageContent') {
+          notification.messageContent = attrValue.split(":")[1];
+        } else if (attrValue.split(":")[0] == 'dateHeureEnvoi') {
+          notification.dateHeureEnvoi = attrValue.split(":")[1];
+        }
+      });
+
+      return notification;
+    }
+
     // Notif reçues en background
       PushNotifications.addListener('pushNotificationReceived',
           (notification: PushNotificationSchema) => {
 
               let parsedNotification: Notification = notification.data.data;
 
-              setUniqueNotif(parsedNotification);
-              alert(JSON.stringify(parsedNotification));
-              alert(parsedNotification.nomUtilisateurEnvoyeur+" "+parsedNotification.messageContent+" "+parsedNotification.dateHeureEnvoi);
-
-              //const str = JSON.stringify(notification.data.data);
-              //const parsed = JSON.parse(str);
-              //alert(str+" \n "+parsed.nomUtilisateurEnvoyeur+" "+parsed.messageContent+" "+parsed.dateHeureEnvoi);
-              //alert(JSON.stringify(notification.data.data.nomUtilisateurEnvoyeur) + " : " + notification.data.data.messageContent + " : " + notification.data.data.dateHeureEnvoi);
-
-              /*
-              // Use functional update to ensure we're working with the latest state
-              setnotifications(prevNotifications => [
-                  ...prevNotifications,
-                  {
-                      "nomUtilisateurEnvoyeur": parsedNotification.nomUtilisateurEnvoyeur,
-                      "messageContent": parsedNotification.messageContent,
-                      "dateHeureEnvoi": parsedNotification.dateHeureEnvoi
-                  }
-              ]);
-*/
+              const notifStr = JSON.stringify(parsedNotification);
+              const notifParsed = parseNotifStr(notifStr);
+              setUniqueNotif(notifParsed);
           }
       );
 
