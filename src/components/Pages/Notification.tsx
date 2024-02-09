@@ -55,6 +55,7 @@ function Notification() {
         (notification: PushNotificationSchema) => {
           let parsedNotification = JSON.parse(notification.data.body);
           setnotifications(notifications => [...notifications, { ...notification, id: notification.id, title: parsedNotification.titre, body: parsedNotification.messageContent, dateTime: parsedNotification.dateHeureEnvoi, type: 'foreground' }])
+          showToast(notification.data.body);
         }
     );
   }

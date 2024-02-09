@@ -18,13 +18,6 @@ function AllAnnonce() {
   const history = useHistory();
   const [session, setSession] = useState(null);  
   const [listeAnnonce, setListeAnnonce] = useState<Annonce []>([]);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const doRefresh = async () => {
-    setIsRefreshing(true);
-    await new Promise(resolve => setTimeout(resolve, 2000)); 
-    setIsRefreshing(false);
-  };
 
   useEffect(() => {
     const storedSessionString = localStorage.getItem("userSession");
@@ -48,12 +41,6 @@ function AllAnnonce() {
 
   return (
     <body className="h-100">
-      <IonRefresher onIonRefresh={doRefresh}>
-        <IonRefresherContent>
-          <IonSpinner name="crescent" />
-          Chargement...
-        </IonRefresherContent>
-      </IonRefresher>
       <p></p>
       <main className="container h-100">
         <div className="back p-2 rounded mt-3 text-white text-center">
