@@ -8,7 +8,8 @@ import "./Acceuil.css";
 import Navigation from "./Navigation";
 import {PushNotifications, PushNotificationSchema, Token} from "@capacitor/push-notifications";
 import {Toast} from "@capacitor/toast";
-import Notification from "../../models/Notification";
+import { v4 as uuidv4 } from 'uuid';
+
 
 function Notification() {
   const [session, setSession] = useState(null);
@@ -27,15 +28,13 @@ function Notification() {
     })
   }
 
-  const nullEntry: Notification[] = []
-  const [notifications, setnotifications] = useState(nullEntry);
-  const [uniqueNotif, setUniqueNotif] = useState<Notification>(
-      {
-    nomUtilisateurEnvoyeur: "",
-    messageContent: "",
-    dateHeureEnvoi: ""
-  });
+  type Notification = {
+    id: string;
+    title: string | undefined;
+    body: string | undefined;
+  };
 
+  const [notifications, setNotifications] = useState<Notification[]>([]);
   const register = () => {
     // Register with Apple / Google to receive push via APNS/FCM
     PushNotifications.register();
@@ -54,64 +53,19 @@ function Notification() {
         }
     );
 
-/*
-      const parseNotifStr = (notifStr : string) => {
-          const notification : Notification = {
-              nomUtilisateurEnvoyeur : '',
-              messageContent : '',
-              dateHeureEnvoi : ''
-          }
-
-          notifStr = notifStr.replace('{', '');
-          notifStr = notifStr.replace('}', '');
-          notifStr = notifStr.replace("\"", '');
-
-          alert(JSON.stringify(notifStr));
-          const attributesValues : string [] = notifStr.split(",");
-          alert(JSON.stringify(attributesValues));
-
-          attributesValues.forEach(attrValue => {
-              if(attrValue.split(":")[0] == 'nomUtilisateurEnvoyeur') {
-                  notification.nomUtilisateurEnvoyeur = attrValue.split(":")[1];
-                  alert(notification.nomUtilisateurEnvoyeur);
-              } else if (attrValue.split(":")[0] == 'messageContent') {
-                  notification.messageContent = attrValue.split(":")[1];
-                  alert(notification.messageContent);
-              } else if (attrValue.split(":")[0] == 'dateHeureEnvoi') {
-                  notification.dateHeureEnvoi = attrValue.split(":")[1];
-                  alert(notification.dateHeureEnvoi);
-              }
-          });
-
-          return notification;
-      }
-
-*/
-
       // Notif reçues en background
       PushNotifications.addListener('pushNotificationReceived',
           (notification: PushNotificationSchema) => {
 
-              alert(JSON.stringify(notification.data.data));
-
-              //alert(parsedNotification.nomUtilisateurEnvoyeur+" "+parsedNotification.messageContent+" "+parsedNotification.dateHeureEnvoi);
-
-              //const str = JSON.stringify(notification.data.data);
-              //const parsed = JSON.parse(str);
-              //alert(str+" \n "+parsed.nomUtilisateurEnvoyeur+" "+parsed.messageContent+" "+parsed.dateHeureEnvoi);
-              //alert(JSON.stringify(notification.data.data.nomUtilisateurEnvoyeur) + " : " + notification.data.data.messageContent + " : " + notification.data.data.dateHeureEnvoi);
-
-              /*
               // Use functional update to ensure we're working with the latest state
-              setnotifications(prevNotifications => [
+            setNotifications(prevNotifications => [
                   ...prevNotifications,
                   {
-                      "nomUtilisateurEnvoyeur": parsedNotification.nomUtilisateurEnvoyeur,
-                      "messageContent": parsedNotification.messageContent,
-                      "dateHeureEnvoi": parsedNotification.dateHeureEnvoi
+                      id: uuidv4(),
+                      title: notification.title,
+                      body: notification.body
                   }
               ]);
-*/
           }
       );
 
@@ -151,14 +105,13 @@ function Notification() {
           data-bs-offset="0">
 
 
-          <ul className="list-group list-group-numbered justify-content-center ml-6 p-4">
-                {notifications.map((notif, index) => (
-                    <li className="list-group-item d-flex justify-content-between align-items-start">
+          <ul className="list-group list-group-numbered justify-content-center">
+                {notifications.map((notif) => (
+                    <li key={notif.id} className="list-group-item d-flex justify-content-between align-items-start">
                         <div className="ms-2 me-auto">
-                            <div className="fw-bold">{notif.nomUtilisateurEnvoyeur}</div>
-                            {notif.messageContent}
+                            <div className="fw-bold">{notif.title}</div>
+                            <p>{notif.body}</p>
                         </div>
-                        <span className="badge bg-primary rounded-pill">{notif.dateHeureEnvoi}</span>
                     </li>
                 ))}
           </ul>

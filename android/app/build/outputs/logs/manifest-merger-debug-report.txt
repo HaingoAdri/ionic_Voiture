@@ -19,6 +19,7 @@ MERGED from [:capacitor-community-fcm] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/no
 MERGED from [:capacitor-app] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:capacitor-haptics] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/haptics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:capacitor-keyboard] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/keyboard/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-26:12
 MERGED from [:capacitor-push-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:capacitor-status-bar] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/status-bar/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:capacitor-toast] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/toast/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
@@ -89,6 +90,8 @@ MERGED from [org.apache.cordova:framework:10.1.1] /Users/nomena/.gradle/caches/t
 application
 ADDED from /Users/nomena/S5/Mr-Rojo/ionic_Voiture/android/app/src/main/AndroidManifest.xml:4:5-36:19
 INJECTED from /Users/nomena/S5/Mr-Rojo/ionic_Voiture/android/app/src/main/AndroidManifest.xml:4:5-36:19
+MERGED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-24:19
+MERGED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-24:19
 MERGED from [:capacitor-push-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-15:19
 MERGED from [:capacitor-push-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-15:19
 MERGED from [:capacitor-cordova-android-plugins] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/android/capacitor-cordova-android-plugins/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-9:19
@@ -197,6 +200,8 @@ MERGED from [:capacitor-haptics] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_mod
 MERGED from [:capacitor-haptics] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/haptics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-keyboard] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/keyboard/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-keyboard] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/keyboard/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-push-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-push-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-status-bar] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/status-bar/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
@@ -323,6 +328,54 @@ uses-permission#android.permission.VIBRATE
 ADDED from [:capacitor-haptics] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/haptics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-66
 	android:name
 		ADDED from [:capacitor-haptics] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/haptics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-63
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:26:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:26:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/nomena/.gradle/caches/transforms-3/ba1badc88fdbfb3280988326f3c9c35c/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/nomena/.gradle/caches/transforms-3/ba1badc88fdbfb3280988326f3c9c35c/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-65
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:5-77
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-74
+receiver#com.capacitorjs.plugins.localnotifications.TimedNotificationPublisher
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-106
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:19-103
+receiver#com.capacitorjs.plugins.localnotifications.NotificationDismissReceiver
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-107
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:19-104
+receiver#com.capacitorjs.plugins.localnotifications.LocalNotificationRestoreReceiver
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-23:20
+	android:exported
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
+	android:directBootAware
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-43
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-103
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.LOCKED_BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-22:29
+action#android.intent.action.LOCKED_BOOT_COMPLETED
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-86
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-83
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-79
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-82
+	android:name
+		ADDED from [:capacitor-local-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:25-79
 service#com.capacitorjs.plugins.pushnotifications.MessagingService
 ADDED from [:capacitor-push-notifications] /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-14:19
 	android:exported
@@ -347,16 +400,6 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/no
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/nomena/.gradle/caches/transforms-3/752a394a68584a7d0163b0e4aacbae8a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:24:22-76
-uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:5-77
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:22-74
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:26:5-68
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/nomena/.gradle/caches/transforms-3/ba1badc88fdbfb3280988326f3c9c35c/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/nomena/.gradle/caches/transforms-3/ba1badc88fdbfb3280988326f3c9c35c/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:26:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/nomena/.gradle/caches/transforms-3/6b3eddfc0e006ab71cbcb6e11557912b/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:28:5-82
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/nomena/.gradle/caches/transforms-3/ba1badc88fdbfb3280988326f3c9c35c/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:11:5-82

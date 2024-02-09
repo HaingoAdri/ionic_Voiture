@@ -38,6 +38,7 @@ com.carapp-packaged_res-36 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@
 com.carapp-packaged_res-37 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/app/android/build/intermediates/packaged_res/debug
 com.carapp-packaged_res-38 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/haptics/android/build/intermediates/packaged_res/debug
 com.carapp-packaged_res-39 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/keyboard/android/build/intermediates/packaged_res/debug
-com.carapp-packaged_res-40 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/packaged_res/debug
-com.carapp-packaged_res-41 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/status-bar/android/build/intermediates/packaged_res/debug
-com.carapp-packaged_res-42 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/toast/android/build/intermediates/packaged_res/debug
+com.carapp-packaged_res-40 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/local-notifications/android/build/intermediates/packaged_res/debug
+com.carapp-packaged_res-41 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/push-notifications/android/build/intermediates/packaged_res/debug
+com.carapp-packaged_res-42 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/status-bar/android/build/intermediates/packaged_res/debug
+com.carapp-packaged_res-43 /Users/nomena/S5/Mr-Rojo/ionic_Voiture/node_modules/@capacitor/toast/android/build/intermediates/packaged_res/debug
