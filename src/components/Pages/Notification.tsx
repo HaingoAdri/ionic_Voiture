@@ -54,16 +54,25 @@ function Notification() {
         }
     );
 
+
     // Notif reçues en background
       PushNotifications.addListener('pushNotificationReceived',
           (notification: PushNotificationSchema) => {
-
               let parsedNotification: Notification = notification.data.data;
 
               setUniqueNotif(parsedNotification);
-              alert(JSON.stringify(parsedNotification));
-              alert(parsedNotification.nomUtilisateurEnvoyeur+" "+parsedNotification.messageContent+" "+parsedNotification.dateHeureEnvoi);
 
+              /*
+              // Check if serviceWorker and controller are defined
+              if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                  navigator.serviceWorker.controller.postMessage(parsedNotification);
+              } else {
+                  console.log('Service worker controller is not available');
+              }*/
+
+              alert(JSON.stringify(parsedNotification));
+
+              //alert(parsedNotification.nomUtilisateurEnvoyeur+" "+parsedNotification.messageContent+" "+parsedNotification.dateHeureEnvoi);
               //const str = JSON.stringify(notification.data.data);
               //const parsed = JSON.parse(str);
               //alert(str+" \n "+parsed.nomUtilisateurEnvoyeur+" "+parsed.messageContent+" "+parsed.dateHeureEnvoi);
