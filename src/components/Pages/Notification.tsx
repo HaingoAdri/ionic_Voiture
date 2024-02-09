@@ -55,12 +55,38 @@ function Notification() {
     );
 
 
+    const parseNotifStr = (notifStr : string) => {
+      const notification : Notification = {
+        nomUtilisateurEnvoyeur : '',
+        messageContent : '',
+        dateHeureEnvoi : ''
+      }
+      
+      notifStr = notifStr.replace('{', '');
+      notifStr = notifStr.replace('}', '');
+      notifStr = notifStr.replace("\"", '');
+      
+      const attributesValues : string [] = notifStr.split(",");
+      
+      attributesValues.forEach(attrValue => {
+        if(attrValue.split(":")[0] == 'nomUtilisateurEnvoyeur') {
+          notification.nomUtilisateurEnvoyeur = attrValue.split(":")[1];
+        } else if (attrValue.split(":")[0] == 'messageContent') {
+          notification.messageContent = attrValue.split(":")[1];
+        } else if (attrValue.split(":")[0] == 'dateHeureEnvoi') {
+          notification.dateHeureEnvoi = attrValue.split(":")[1];
+        }
+      });
+
+      return notification;
+    }
+
     // Notif reçues en background
       PushNotifications.addListener('pushNotificationReceived',
           (notification: PushNotificationSchema) => {
               let parsedNotification: Notification = notification.data.data;
 
-              setUniqueNotif(parsedNotification);
+//              setUniqueNotif(parsedNotification);
 
               /*
               // Check if serviceWorker and controller are defined
@@ -89,6 +115,11 @@ function Notification() {
                   }
               ]);
 */
+
+              const notifStr = JSON.stringify(parsedNotification);
+              const notifParsed = parseNotifStr(notifStr);
+              setUniqueNotif(notifParsed);
+
           }
       );
 
