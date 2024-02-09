@@ -28,3 +28,10 @@ yarn-error.log*
 
 # Optional eslint cache
 .eslintcache
+android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+android/app/build/intermediates/assets/debug/public/index.html
+android/app/build/intermediates/compressed_assets/debug/out/assets/public/index.html.jar
+android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml
+android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+android/app/src/main/assets/public/index.html
+android/capacitor-cordova-android-plugins/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
