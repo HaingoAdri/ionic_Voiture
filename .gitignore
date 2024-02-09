@@ -35,3 +35,4 @@ android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml
 android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
 android/app/src/main/assets/public/index.html
 android/capacitor-cordova-android-plugins/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
